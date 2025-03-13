@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"tb_stopwatch_func_synth.v" \
+"../../../../../stopwatch_dote.srcs/sim_1/imports/new/tb_stopwatch.v" \
+
+# Do not sort compile order
+nosort

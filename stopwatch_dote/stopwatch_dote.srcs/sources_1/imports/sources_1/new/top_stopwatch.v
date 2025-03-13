@@ -1,0 +1,191 @@
+
+
+module top_stopwatch (
+    input clk,
+    input reset,
+    input [1:0] sw,
+    input btn_run,
+    input btn_clear,
+    input btn_up,
+    input btn_set,
+    input btn_down,
+    output [3:0] fnd_comm,
+    output [7:0] fnd_font,
+    output [3:0] led
+);
+
+
+    wire [6:0] w_msec, w_sec, w_min, w_hour;
+    wire [6:0] w_msec2, w_sec2, w_min2, w_hour2;
+    wire [6:0] w_msec3, w_sec3, w_min3, w_hour3;
+    wire w_run,w_clear;
+    wire [2:0] w_set;
+    wire w_btn_run,w_btn_clear,w_btn_up,w_btn_down,w_btn_set;
+
+    
+    led u_led (
+    .sw(sw),
+    .led(led)
+    );
+
+    btn_debounce u_btn (
+        .i_btn(btn_run),
+        .clk  (clk),
+        .reset(reset),
+        .o_btn(w_btn_run)
+    );
+
+    btn_debounce u_btn2 (
+        .i_btn(btn_clear),
+        .clk  (clk),
+        .reset(reset),
+        .o_btn(w_btn_clear)
+    );
+    btn_debounce u_btn3 (
+        .i_btn(btn_up),
+        .clk  (clk),
+        .reset(reset),
+        .o_btn(w_btn_up)
+    );
+    btn_debounce u_btn4 (
+        .i_btn(btn_down),
+        .clk  (clk),
+        .reset(reset),
+        .o_btn(w_btn_down)
+    );
+       btn_debounce u_btn5 (
+        .i_btn(btn_set),
+        .clk  (clk),
+        .reset(reset),
+        .o_btn(w_btn_set)
+    );
+    clock_set u_clock_set (
+    .clk(clk),
+    .reset(reset),
+    .i_set(w_btn_set),
+    .sw(sw[1]),
+     .o_set(w_set)
+);
+        stopwatch_cu2 U_CU2 (
+        .clk(clk),
+        .reset(reset),
+        .i_run_stop(w_btn_run),
+        .sw(sw[1]),
+        .i_clear(w_btn_clear),
+        .o_run_stop(w_run),
+        .o_clear(w_clear)
+    );
+    stopwatch_dp2 dps2(
+     .clk(clk),
+     .reset(reset),
+     .run(w_run),
+     .clear(w_clear),
+    .msec(w_msec2),
+    .sec(w_sec2),
+    .min(w_min2),
+    .hour(w_hour2)
+    );
+
+    stopwatch_dp dps(
+     .clk(clk),
+     .reset(reset),
+     .up(w_btn_up),
+     .sw(sw[1]),    
+     .down(w_btn_down),
+     .set(w_btn_set),
+    .msec(w_msec),
+    .sec(w_sec),
+    .min(w_min),
+    .hour(w_hour),
+    .i_set(w_set)
+    );
+    
+    fnd_controlloer U_counter (  //control anod segments
+        .clk(clk),
+        .sw(sw),
+        .set(w_set),
+        .reset(reset),
+        .msec(w_msec3),
+        .sec(w_sec3),
+        .min(w_min3),
+        .hour(w_hour3),
+        .seg_out(fnd_font),
+        .seg_comm(fnd_comm)
+    );
+    st_cl ust_c (
+    .sw(sw[1]),
+    .msec1(w_msec),
+        .sec1(w_sec),
+        .min1(w_min),
+        .hour1(w_hour),
+        .msec2(w_msec2),
+        .sec2(w_sec2),
+        .min2(w_min2),
+        .hour2(w_hour2),
+            .msec3(w_msec3),
+            .sec3(w_sec3),
+            .min3(w_min3),
+            .hour3(w_hour3)
+);
+endmodule
+
+module led (
+    input [1:0] sw,
+    output [3:0] led
+);
+      reg [3:0] r_led;
+    assign led = r_led; 
+    always @(*) begin
+        case (sw)
+            2'b00 : r_led = 4'b0001;
+            2'b01 : r_led = 4'b0010;
+            2'b10 : r_led = 4'b0100;
+            2'b11 : r_led = 4'b1000;
+            default: r_led = 4'b0001;
+        endcase
+    end
+endmodule
+
+module st_cl (
+    input sw,
+    input [6:0] msec1,
+    input [6:0] sec1,
+    input [6:0] min1,
+    input [6:0] hour1,
+    input [6:0] msec2,
+    input [6:0] sec2,
+    input [6:0] min2,
+    input [6:0] hour2,
+    output reg [6:0] msec3,
+    output reg [6:0] sec3,
+    output reg [6:0] min3,
+    output reg [6:0] hour3
+);
+always @(*) begin
+    case (sw)
+       1'b1 : begin
+        msec3 = msec1;
+        sec3 = sec1;
+        min3 = min1;
+        hour3 = hour1;
+       end 
+       1'b0 :
+       begin
+        msec3 = msec2;
+        sec3 = sec2;
+        min3 = min2;
+        hour3 = hour2;
+       end 
+        default: begin
+        msec3 = msec1;
+        sec3 = sec1;
+        min3 = min1;
+        hour3 = hour1;
+       end 
+    endcase
+end
+
+
+
+    
+endmodule

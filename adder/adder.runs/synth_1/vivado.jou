@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Feb 28 09:02:32 2025
+# Process ID: 20648
+# Current directory: C:/FPGA_Harman/adder/adder.runs/synth_1
+# Command line: vivado.exe -log bit4adder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bit4adder.tcl
+# Log file: C:/FPGA_Harman/adder/adder.runs/synth_1/bit4adder.vds
+# Journal file: C:/FPGA_Harman/adder/adder.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source bit4adder.tcl -notrace

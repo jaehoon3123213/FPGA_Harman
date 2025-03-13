@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../20250306counter10000.srcs/sources_1/new/btn_debounce.v" \
+"../../../../20250306counter10000.srcs/sources_1/imports/new/calcu.v" \
+"../../../../20250306counter10000.srcs/sources_1/new/stopwatch_cu.v" \
+"../../../../20250306counter10000.srcs/sources_1/new/stopwatch_dp.v" \
+"../../../../20250306counter10000.srcs/sources_1/new/top_stopwatch.v" \
+"../../../../20250306counter10000.srcs/sim_1/new/tb_stopwatch.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
