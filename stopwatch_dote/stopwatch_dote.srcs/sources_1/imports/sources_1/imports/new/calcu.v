@@ -139,7 +139,7 @@ module clock_div (
     input  reset,
     output o_clk
 );
-    parameter FCOUNT = 1000000;
+    parameter FCOUNT = 100000;
     reg [$clog2(FCOUNT)-1:0] r_counter;
     reg r_clk;
     assign o_clk = r_clk;
