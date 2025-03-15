@@ -108,7 +108,7 @@ module clk_div_100 (
 );
 
 
-    parameter FCOUNT = 1_00_0000;
+    parameter FCOUNT = 1_00_0000; //
     reg [$clog2(FCOUNT)-1:0] count_reg, count_next;
     reg clk_reg, clk_next;  //출력을 플립플롭으로 내보냄
 

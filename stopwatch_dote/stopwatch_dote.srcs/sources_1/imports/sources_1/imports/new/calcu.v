@@ -238,7 +238,25 @@ module digit_splitter #(
     output [3:0] digit_1,
     output [3:0] digit_10
 );
-    assign digit_1  = sum1 % 10;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   assign digit_1  = sum1 % 10;
     assign digit_10 = sum1 / 10 % 10;
 
 endmodule
