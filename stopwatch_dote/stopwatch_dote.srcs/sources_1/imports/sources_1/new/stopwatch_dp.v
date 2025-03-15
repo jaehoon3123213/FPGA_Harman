@@ -27,7 +27,7 @@ module stopwatch_dp (
     input down,
     input set,
     input sw,
-    input [2:0] i_set,
+    input [1:0] i_set,
     output [6:0] msec,
     output [6:0] sec,
     output [6:0] min,
@@ -189,7 +189,7 @@ module time_counter_sec #(
     input up,
     input down,
     input sw,
-    input [2:0] set,
+    input [1:0] set,
     output [BIT_WIDTH : 0] o_time,
     output o_tick
 );
@@ -250,7 +250,7 @@ module time_counter_min #(
     input up,
     input down,
     input sw,
-    input [2:0] set,
+    input [1:0] set,
     output [BIT_WIDTH : 0] o_time,
     output o_tick
 );
@@ -309,7 +309,7 @@ module time_counter_hour #(
     input up,
     input down,
     input sw,
-    input [2:0] set,
+    input [1:0] set,
     output [BIT_WIDTH : 0] o_time,
     output o_tick
 );
@@ -363,10 +363,10 @@ module clock_set (
     input reset,
     input i_set,
     input sw,
-    output [2:0] o_set
+    output [1:0] o_set
 );
 
-    reg [2:0] r_set;
+    reg [1:0] r_set;
     assign o_set = r_set;
     reg [1:0] state, next;
     parameter STOP = 2'b00, SEC = 2'b01, MIN = 2'b10, HOUR = 2'b11;

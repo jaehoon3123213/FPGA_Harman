@@ -30,7 +30,7 @@ module stopwatch_dp2 (
     output [6:0] msec,
     output [6:0] sec,
     output [6:0] min,
-    output [5:0] hour
+    output [6:0] hour
 
 );
     wire w_clk_100hz;

@@ -19,7 +19,7 @@ module top_stopwatch (
     wire [6:0] w_msec2, w_sec2, w_min2, w_hour2;
     wire [6:0] w_msec3, w_sec3, w_min3, w_hour3;
     wire w_run,w_clear;
-    wire [2:0] w_set;
+    wire [1:0] w_set;
     wire w_btn_run,w_btn_clear,w_btn_up,w_btn_down,w_btn_set;
 
     

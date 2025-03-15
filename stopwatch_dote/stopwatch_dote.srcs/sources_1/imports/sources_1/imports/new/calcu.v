@@ -164,7 +164,7 @@ module clock_div2hz (
     input  reset,
     output o_clk
 );
-    parameter FCOUNT = 50; //default 50000000
+    parameter FCOUNT = 50000000; //default 50000000
     reg [$clog2(FCOUNT)-1:0] r_counter;
     reg r_clk;
     assign o_clk = r_clk;
@@ -345,7 +345,7 @@ endmodule
 module fnd_controlloer (  //control anod segments
     input clk,
     input reset,
-    input [2:0] set,
+    input [1:0] set,
     input [6:0] msec,
     input [6:0] sec,
     input [6:0] min,
@@ -473,7 +473,7 @@ module fnd_controlloer (  //control anod segments
 endmodule
 
 module set_bcd (
-    input [2:0] set,
+    input [1:0] set,
     input [1:0] sw,
     input [3:0] seg_comm,
     input [7:0] bcd,
