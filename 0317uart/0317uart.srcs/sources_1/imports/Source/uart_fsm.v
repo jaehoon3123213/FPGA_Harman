@@ -40,6 +40,9 @@ module uart_fsm (
 
 endmodule
 
+
+
+
 module uart_rx (
     input  clk,
     input  reset,

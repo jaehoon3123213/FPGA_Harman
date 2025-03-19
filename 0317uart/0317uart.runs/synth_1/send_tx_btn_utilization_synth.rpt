@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Tue Mar 18 16:42:21 2025
+| Date         : Wed Mar 19 09:37:56 2025
 | Host         : DESKTOP-7CFQ9ND running 64-bit major release  (build 9200)
 | Command      : report_utilization -file send_tx_btn_utilization_synth.rpt -pb send_tx_btn_utilization_synth.pb
 | Design       : send_tx_btn
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   59 |     0 |     20800 |  0.28 |
-|   LUT as Logic          |   59 |     0 |     20800 |  0.28 |
+| Slice LUTs*             |   65 |     0 |     20800 |  0.31 |
+|   LUT as Logic          |   65 |     0 |     20800 |  0.31 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
 | Slice Registers         |   41 |     0 |     41600 |  0.10 |
 |   Register as Flip Flop |   41 |     0 |     41600 |  0.10 |
@@ -150,14 +150,13 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDCE     |   40 |        Flop & Latch |
-| LUT6     |   27 |                 LUT |
-| LUT4     |   16 |                 LUT |
+| LUT6     |   31 |                 LUT |
+| LUT3     |   20 |                 LUT |
+| LUT5     |   14 |                 LUT |
 | OBUF     |   13 |                  IO |
-| LUT3     |   12 |                 LUT |
-| LUT5     |   11 |                 LUT |
+| LUT4     |    9 |                 LUT |
 | LUT2     |    5 |                 LUT |
 | IBUF     |    3 |                  IO |
-| LUT1     |    1 |                 LUT |
 | FDPE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
