@@ -6,18 +6,19 @@ module uart_fsm (
     input btn_start,
     input [7:0] tx_data_in,
     output tx,
-    output tx_done,
+    inout tx_done,
     output [7:0] w_o_data,
     input rx
 );  
     wire w_tick, w_btn_start;
     wire w_tx_done,w_rx_done;
+    wire [7:0] w_o_data2,w_o_data3,w_o_data4;
     uart_tx u_uart_tx (
         .clk(clk),
         .reset(reset),
         .tick(w_tick),
-        .data_in(w_o_data),
-        .start_trigger(w_rx_done),
+        .data_in(w_o_data4),
+        .start_trigger({~w_empty2 && ~tx_done}),
         .o_tx(tx),
         .tx_done(tx_done)
     );
@@ -37,8 +38,36 @@ module uart_fsm (
         .tick (w_tick)
     );
 
+    fifo urxa(
+    .clk(clk),
+    .reset(reset),
+    .wdata(w_o_data),
+    .wr(w_rx_done),
+    .rd(~w_full),
+    .rdata(w_o_data2),
+    .empty(w_empty),
+    .full()
+);
+    fifo utx(
+    .clk(clk),
+    .reset(reset),
+    .wdata(w_o_data2),
+    .wr(~w_empty),
+    .rd({~w_empty2 && ~tx_done}),
+    .rdata(w_o_data3),
+    .empty(w_empty2),
+    .full(w_full)
+);
+data_save d_save( 
+    .clk(clk),
+    .reset(reset),
+    .rd(~w_empty2),
+  .data_in(w_o_data3),
+  .data_out(w_o_data4)
+);
 
 endmodule
+
 
 
 
@@ -52,6 +81,7 @@ module uart_rx (
     output [7:0] o_data
 );
 
+    
     reg [7:0] data,data_next;
     reg [4:0] tick_count, tick_count_next;
     reg [1:0] state, next;
@@ -135,7 +165,33 @@ module uart_rx (
     end
 endmodule
 
+module data_save(
+input clk,
+input reset,
+input rd,
+input [7:0] data_in,
+output [7:0] data_out
+);
+reg [7:0] data_reg,data_next;
+assign data_out = data_reg;
+always @(posedge clk) begin
+    if (reset) begin
+        data_reg <=0;
+    end
+    else begin
+        data_reg <= data_next;
+    end
+end
+always@(*) begin
+    data_next = data_reg;
+    if(rd) begin
+        data_next = data_in;
+    end
 
+    
+end
+ 
+endmodule
 
 
 module uart_tx (
@@ -144,6 +200,7 @@ module uart_tx (
     input tick,
     input [7:0] data_in,
     input start_trigger,
+    
     output o_tx,
     output tx_done
 );
@@ -274,3 +331,146 @@ module tick_9600hz (
 endmodule
 
 
+
+
+
+module fifo (
+    input clk,
+    input reset,
+    // write
+    input [7:0] wdata,
+    input wr,
+    // read
+    input rd,
+    output [7:0] rdata,
+    output empty,
+    output full
+);
+
+wire [3:0]w_waddr, w_raddr;
+
+
+register_file uregister (
+    .clk(clk),
+     .waddr(w_waddr),
+    .wdata(wdata),
+    .raddr(w_raddr),
+    .wr({~full&wr}),
+    .rdata(rdata)
+);
+
+
+fifo_cu ufifo_cu (
+    .clk(clk),
+    .reset(reset),
+    .wr(wr),
+    .rd(rd),
+     .waddr(w_waddr),
+     .raddr(w_raddr),
+     .full(full),
+     .empty(empty)
+);
+
+endmodule
+
+
+module register_file (
+    input clk,
+    input [3:0] waddr,
+    input [7:0] wdata,
+    input [3:0] raddr,
+    input wr,
+    output [7:0] rdata
+);
+
+    reg [7:0] ram[0:2**4-1];
+
+    assign rdata = ram[raddr];  // 0 0 일떄 우선순위?
+
+    always @(posedge clk) begin
+        if (wr) begin
+            ram[waddr] = wdata;
+        end
+    end
+
+endmodule
+
+
+module fifo_cu (
+    input clk,
+    input reset,
+    input wr,
+    input rd,
+    output [3:0] waddr,
+    output [3:0] raddr,
+    output full,
+    output empty
+);
+
+    reg full_reg, full_next, empty_reg, empty_next;
+    reg [3:0] w_ptr, w_ptr_next, r_ptr, r_ptr_next;
+    assign empty = empty_reg;
+    assign full = full_reg;
+    assign waddr = w_ptr;
+    assign raddr = r_ptr;
+
+    always @(posedge clk, posedge reset) begin
+        if (reset) begin
+            w_ptr <= 0;
+            r_ptr <= 0;
+            full_reg <= 0;
+            empty_reg <= 1;
+        end else begin
+            full_reg <= full_next;
+            empty_reg <= empty_next;
+            w_ptr <= w_ptr_next;
+            r_ptr <= r_ptr_next;
+        end
+    end
+
+    always @(*) begin
+        full_next  = full_reg;
+        empty_next = empty_reg;
+        w_ptr_next = w_ptr;
+        r_ptr_next = r_ptr;
+        case ({
+            wr, rd
+        })  // state 입력은 외부에서서
+            2'b01: begin
+                if (empty_reg == 0) begin
+                    r_ptr_next = r_ptr + 1;
+                    full_next  = 1'b0;
+                    if (w_ptr_next == r_ptr_next) begin
+                        empty_next = 1'b1;
+                    end
+                end
+            end
+            2'b10: begin
+                if (full_reg == 0) begin
+                    w_ptr_next = w_ptr + 1;
+                    empty_next = 1'b0;
+                    if (w_ptr_next == r_ptr_next) begin
+                        full_next = 1'b1;
+                    end
+                end
+            end
+
+            2'b11: begin
+                if(empty_reg == 1'b1) begin // 동시에 들어올때 empty면 read는 무시
+                    w_ptr_next = w_ptr +1;
+                    empty_next = 1'b0;
+                end
+                else if(full_reg == 1'b1) begin
+                    r_ptr_next = r_ptr +1;
+                    full_next = 1'b0;
+                end
+                else begin
+                     r_ptr_next = r_ptr +1;
+                     w_ptr_next = w_ptr +1;
+                end
+             end
+            
+        endcase
+    end
+
+endmodule
