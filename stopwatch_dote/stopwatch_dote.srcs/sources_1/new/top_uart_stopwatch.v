@@ -17,9 +17,11 @@ module top_uart_stopwatch (
     output tx,
     input rx
 );
-
+    wire [3:0] w_digit_mec_1, w_digit_mec_10, w_digit_sec_1, w_digit_sec_10;
+    wire [3:0] w_digit_min_1, w_digit_min_10, w_digit_hour_1, w_digit_hour_10;
     wire [7:0] rx_data;
     wire w_rx_done;
+    wire [1:0] sw;
     wire [6:0] w_msec, w_sec, w_min, w_hour;
     top_stopwatch ustopwatch (
         .clk(clk),
@@ -34,10 +36,19 @@ module top_uart_stopwatch (
         .fnd_comm(fnd_comm),
         .fnd_font(fnd_font),
         .led(led),
-        .w_msec(w_msec),
-        .w_sec(w_sec),
-        .w_min(w_min),
-        .w_hour(w_hour)
+        // .w_msec(w_msec),
+        // .w_sec(w_sec),
+        // .w_min(w_min),
+        // .w_hour(w_hour),
+        .sw(sw),
+    .w_digit_mec_1(w_digit_mec_1),
+     .w_digit_mec_10(w_digit_mec_10),
+     .w_digit_sec_1(w_digit_sec_1),
+     .w_digit_sec_10(w_digit_sec_10),
+     .w_digit_min_1(w_digit_min_1),
+     .w_digit_min_10(w_digit_min_10),
+     .w_digit_hour_1(w_digit_hour_1),
+     .w_digit_hour_10(w_digit_hour_10)
     );
 
     uart_fsm uuart (
@@ -60,19 +71,23 @@ module top_uart_stopwatch (
 
 endmodule
 
-
 module uart_clock (
     input reset,
     input clk,
     output tx,
     input [6:0] w_msec,
+    input [6:0] w_msec10,
     input [6:0] w_sec,
+    input [6:0] w_sec10,
     input [6:0] w_min,
-    input [6:0] w_hour
+    input [6:0] w_min10,
+    input [6:0] w_hour,
+    input [6:0] w_hour10
 );
-    wire [7:0] w_data,w_data2,w_data3;
-    wire [7:0] w_sec2,w_min2, w_hour2;
-    wire [7:0] w_sec10,w_min10, w_hour10;
+    wire [7:0] w_data,w_data2,w_data3,w_data4;
+    wire [7:0] w_mec2,w_sec2,w_min2, w_hour2;
+    wire [7:0] o_w_hour, o_w_hour10, o_w_min, o_w_min10, o_w_sec, o_w_sec10, o_w_msec, o_w_msec10;
+
     fifo utx2 (
         .clk(clk),
         .reset(reset),
@@ -98,12 +113,14 @@ module uart_clock (
         .tx_done(tx_done)
     );
     
-    clock_tx_control uclock_Tx(
-     .w_sec(w_sec2),
-     .w_min(w_min2),
-     .w_hour(w_hour2),
-    .w_sec10(w_sec10),
-     .w_min10(w_min10),
+    clock_tx_control uclock_Tax(
+    .w_msec(o_w_msec),
+    .w_msec10(o_w_msec10),
+     .w_sec(o_w_sec),
+     .w_min(o_w_sec10),
+     .w_hour(o_w_hour),
+    .w_sec10(o_w_sec10),
+     .w_min10(o_w_min10),
      .w_hour10(w_hour10),
     .clk(clk),  
     .reset(reset),
@@ -111,6 +128,7 @@ module uart_clock (
     .data(w_data),
     .w_empty2(w_empty2)
     );
+
         data_save d_save2 (
         .clk(clk),
         .reset(reset),
@@ -118,28 +136,39 @@ module uart_clock (
         .data_in(w_data2),
         .data_out(w_data3)
     );
-bit_asci u_bit(
-.data(w_sec),
-.o_data(w_sec2),
-.o_data10(w_sec10)
+bit_asci u_bit3(
+.data0(w_hour),
+.data10(w_hour10),
+.o_data(o_w_hour),
+.o_data10(o_w_hour10)
 );
 bit_asci u_bit2(
-.data(w_min),
-.o_data(w_min2),
-.o_data10(w_min10)
+.data0(w_min),
+.data10(w_min10),
+.o_data(o_w_min),
+.o_data10(o_w_min10)
 );
-bit_asci u_bit3(
-.data(w_hour),
-.o_data(w_hour2),
-.o_data10(w_hour10)
+bit_asci u_bit1(
+.data0(w_sec),
+.data10(w_sec10),
+.o_data(o_w_sec),
+.o_data10(o_w_sec10)
+);
+bit_asci u_bit4(
+.data0(w_mec),
+.data10(w_msec10),
+.o_data(o_w_msec),
+.o_data10(o_w_msec10)
 );
 
 endmodule
 
 module clock_tx_control (
+    input [7:0] w_msec,
     input [7:0] w_sec,
     input [7:0] w_min,
     input [7:0] w_hour,
+    input [7:0] w_msec10,
     input [7:0] w_sec10,
     input [7:0] w_min10,
     input [7:0] w_hour10,
@@ -175,7 +204,7 @@ module clock_tx_control (
         data_next = data_reg;
         case (state)
             IDLE:
-            if(w_sec == "0")
+            if(w_msec == "0")
              begin
                 next = START;
             end
@@ -231,15 +260,11 @@ module clock_tx_control (
             begin
                 start_next = 1;
                 data_next = "\n";
-                data_count_next = data_count +1;
-                if (data_count == 10) begin
-                 next = WAIT;
-                 data_count_next =0;
-                end
+                next = WAIT;
             end
             
             WAIT: begin
-                if(w_sec == "1")
+                if(w_msec == "1")
                 begin
                     next = IDLE;
                 end
@@ -252,13 +277,13 @@ module clock_tx_control (
 endmodule
 
 module bit_asci(
-input [6:0] data,
+input [6:0] data0,
+input [6:0] data10,
 output reg [7:0] o_data, o_data10
 );
-reg [7:0] data0,data10;
+
 always @(*) begin
-    data0 = data % 10;
-    data10 = data /10 %10;
+
     case (data0)
         0 : o_data = "0"; 
         1 : o_data = "1" ;

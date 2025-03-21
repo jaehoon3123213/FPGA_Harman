@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Mar 21 18:14:07 2025
-# Process ID: 14012
+# Start of session at: Fri Mar 21 19:05:26 2025
+# Process ID: 10256
 # Current directory: C:/FPGA_Harman/stopwatch_dote/stopwatch_dote.runs/impl_1
 # Command line: vivado.exe -log top_uart_stopwatch.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_uart_stopwatch.tcl -notrace
 # Log file: C:/FPGA_Harman/stopwatch_dote/stopwatch_dote.runs/impl_1/top_uart_stopwatch.vdi

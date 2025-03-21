@@ -13,10 +13,15 @@ module top_stopwatch (
     output [3:0] fnd_comm,
     output [7:0] fnd_font,
     output [3:0] led,
-    output [6:0] w_msec,
-    output [6:0] w_sec,
-    output [6:0] w_min,
-    output [6:0] w_hour
+    output [6:0] w_digit_mec_1,
+    output [6:0] w_digit_mec_10,
+    output [6:0] w_digit_sec_1,
+    output [6:0] w_digit_sec_10,
+    output [6:0] w_digit_min_1,
+    output [6:0] w_digit_min_10,
+    output [6:0] w_digit_hour_1,
+    output [6:0] w_digit_hour_10,
+    output [1:0] sw
 );
 
     
@@ -25,7 +30,6 @@ module top_stopwatch (
     wire w_run,w_clear;
     wire [1:0] w_set;
     wire w_btn_run,w_btn_clear,w_btn_up,w_btn_down,w_btn_set;
-    wire [1:0] sw;
     wire [4:0] btn;
 
     
@@ -116,7 +120,15 @@ module top_stopwatch (
         .min(w_min3),
         .hour(w_hour3),
         .seg_out(fnd_font),
-        .seg_comm(fnd_comm)
+        .seg_comm(fnd_comm),
+    .w_digit_mec_1(w_digit_mec_1),
+    .w_digit_mec_10(w_digit_mec_10),
+    .w_digit_sec_1(w_digit_sec_1),
+    .w_digit_sec_10(w_digit_sec_10),
+    .w_digit_min_1(w_digit_min_1),
+    .w_digit_min_10(w_digit_min_10),
+    .w_digit_hour_1(w_digit_hour_1),
+    .w_digit_hour_10(w_digit_hour_10)
     );
     st_cl ust_c (
     .sw(sw[1]),
