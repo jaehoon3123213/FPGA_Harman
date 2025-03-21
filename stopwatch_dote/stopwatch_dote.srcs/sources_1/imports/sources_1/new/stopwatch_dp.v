@@ -32,8 +32,9 @@ module stopwatch_dp (
     output [6:0] sec,
     output [6:0] min,
     output [6:0] hour
-
 );
+
+    
     wire w_clk_100hz;
     wire w_msec_tick, w_sec_tick, w_min_tick;
     time_counter #(
@@ -108,7 +109,7 @@ module clk_div_100 (
 );
 
 
-    parameter FCOUNT = 1_00_0000; //
+    parameter FCOUNT = 1000000; // 1000000
     reg [$clog2(FCOUNT)-1:0] count_reg, count_next;
     reg clk_reg, clk_next;  //출력을 플립플롭으로 내보냄
 

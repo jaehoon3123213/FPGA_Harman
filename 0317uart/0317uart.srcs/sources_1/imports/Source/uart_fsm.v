@@ -3,8 +3,6 @@
 module uart_fsm (
     input reset,
     input clk,
-    input btn_start,
-    input [7:0] tx_data_in,
     output tx,
     inout tx_done,
     output [7:0] w_o_data,
@@ -18,7 +16,7 @@ module uart_fsm (
         .reset(reset),
         .tick(w_tick),
         .data_in(w_o_data4),
-        .start_trigger({~w_empty2 && ~tx_done}),
+        .start_trigger(~w_empty2 & ~tx_done),
         .o_tx(tx),
         .tx_done(tx_done)
     );
@@ -53,7 +51,7 @@ module uart_fsm (
     .reset(reset),
     .wdata(w_o_data2),
     .wr(~w_empty),
-    .rd({~w_empty2 && ~tx_done}),
+    .rd(~w_empty2 & ~tx_done),
     .rdata(w_o_data3),
     .empty(w_empty2),
     .full(w_full)
@@ -209,6 +207,8 @@ module uart_tx (
     reg [3:0] data_count, data_count_next;
     reg [3:0] state, next;
     reg [3:0] tick_count, tick_count_next;
+    reg [7:0] temp_data_reg, temp_data_next;
+
     reg tx, tx_next;
     reg r_tx_done, r_tx_done_next;
     assign tx_done = r_tx_done;

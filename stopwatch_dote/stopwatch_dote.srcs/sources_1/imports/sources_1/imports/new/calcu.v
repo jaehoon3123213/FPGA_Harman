@@ -370,17 +370,25 @@ module fnd_controlloer (  //control anod segments
     input [6:0] hour,
     input [2:0] sw,
     output [7:0] seg_out,
-    output [3:0] seg_comm
-);
+    output [3:0] seg_comm,
+    output [3:0] w_digit_mec_1,
+    output [3:0] w_digit_mec_10,
+    output [3:0] w_digit_sec_1,
+    output [3:0] w_digit_sec_10,
+    output [3:0] w_digit_min_1,
+    output [3:0] w_digit_min_10,
+    output [3:0] w_digit_hour_1,
+    output [3:0] w_digit_hour_10
+);  
+
     wire [3:0] digit_1, digit_10;
     wire [3:0] splited_bcd;
     wire [2:0] w_seg_sel;
     wire o_clk, w_2hz;
-    wire [3:0] w_digit_mec_1, w_digit_mec_10, w_digit_sec_1, w_digit_sec_10;
-    wire [3:0] w_digit_min_1, w_digit_min_10, w_digit_hour_1, w_digit_hour_10;
     wire [3:0] w_bcd_in1, w_bcd_in2;
     wire [7:0] w_bcd;
     wire [7:0] w_seg_out;
+    
     clock_div u_clock_div (
         .clk  (clk),
         .reset(reset),

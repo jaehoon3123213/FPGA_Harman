@@ -3,24 +3,30 @@
 module top_stopwatch (
     input clk,
     input reset,
-    input [1:0] sw,
+    input [7:0] rx_data,
     input btn_run,
     input btn_clear,
     input btn_up,
     input btn_set,
     input btn_down,
+    input rx_done,
     output [3:0] fnd_comm,
     output [7:0] fnd_font,
-    output [3:0] led
+    output [3:0] led,
+    output [6:0] w_msec,
+    output [6:0] w_sec,
+    output [6:0] w_min,
+    output [6:0] w_hour
 );
 
-
-    wire [6:0] w_msec, w_sec, w_min, w_hour;
+    
     wire [6:0] w_msec2, w_sec2, w_min2, w_hour2;
     wire [6:0] w_msec3, w_sec3, w_min3, w_hour3;
     wire w_run,w_clear;
     wire [1:0] w_set;
     wire w_btn_run,w_btn_clear,w_btn_up,w_btn_down,w_btn_set;
+    wire [1:0] sw;
+    wire [4:0] btn;
 
     
     led u_led (
@@ -62,16 +68,16 @@ module top_stopwatch (
     clock_set u_clock_set (
     .clk(clk),
     .reset(reset),
-    .i_set(w_btn_set),
+    .i_set(w_btn_set | btn[2]),
     .sw(sw[1]),
      .o_set(w_set)
 );
         stopwatch_cu2 U_CU2 (
         .clk(clk),
         .reset(reset),
-        .i_run_stop(w_btn_run),
+        .i_run_stop(w_btn_run | btn[0]),
         .sw(sw[1]),
-        .i_clear(w_btn_clear),
+        .i_clear({w_btn_clear || btn[1]}),
         .o_run_stop(w_run),
         .o_clear(w_clear)
     );
@@ -89,10 +95,10 @@ module top_stopwatch (
     stopwatch_dp dps(
      .clk(clk),
      .reset(reset),
-     .up(w_btn_up),
+     .up({w_btn_up || btn[3]}),
      .sw(sw[1]),    
-     .down(w_btn_down),
-     .set(w_btn_set),
+     .down({w_btn_down || btn[4]}),
+     .set({w_btn_set || btn[2]}),
     .msec(w_msec),
     .sec(w_sec),
     .min(w_min),
@@ -127,6 +133,70 @@ module top_stopwatch (
             .min3(w_min3),
             .hour3(w_hour3)
 );
+
+    transasci utrans(
+    .rx_data(rx_data),
+    .clk(clk),
+    .reset(reset),
+    .rx_done(rx_done),
+    .sw(sw),
+    .btn(btn)
+);
+endmodule
+
+module transasci (
+    input [7:0] rx_data,
+    input clk,
+    input rx_done,
+    input reset,
+    output [1:0] sw,
+    output [4:0] btn
+);
+reg [1:0] sw_reg, sw_next;
+reg [4:0] btn_reg, btn_next;
+assign btn = btn_reg;
+assign sw = sw_reg;
+
+always @(posedge clk, posedge reset) begin
+    if(reset) begin
+        sw_reg <= 0;
+        btn_reg <= 0;
+    end
+    else begin
+        btn_reg <= btn_next;
+        sw_reg <= sw_next;
+    end
+end
+always @(*) begin
+    btn_next = 5'b0;
+    sw_next =sw_reg;
+if (rx_done == 1) begin
+case (rx_data)
+        "m" : if (sw_reg[1] == 1'b0) begin
+            sw_next[1] = 1'b1;
+        end
+        else begin
+            sw_next[1] = 1'b0;
+        end
+        "n" : if (sw_reg[0] == 1'b0) begin
+            sw_next[0] = 1'b1;
+        end
+        else begin
+            sw_next[0] = 1'b0;
+        end
+        "r" : btn_next = 5'b00001;
+        "c" : btn_next = 5'b00010;
+        "s" : btn_next = 5'b00100;
+        "u" : btn_next = 5'b01000;
+        "d" : btn_next = 5'b10000;
+endcase
+end
+end
+
+
+
+
+    
 endmodule
 
 module led (
@@ -148,6 +218,7 @@ endmodule
 
 module st_cl (
     input sw,
+    input sw2,
     input [6:0] msec1,
     input [6:0] sec1,
     input [6:0] min1,
