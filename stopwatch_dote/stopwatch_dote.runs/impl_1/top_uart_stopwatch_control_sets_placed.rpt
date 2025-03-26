@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Fri Mar 21 18:14:26 2025
+| Date         : Tue Mar 25 16:37:27 2025
 | Host         : DESKTOP-7CFQ9ND running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_uart_stopwatch_control_sets_placed.rpt
 | Design       : top_uart_stopwatch
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    40 |
-|    Minimum number of control sets                        |    40 |
+| Total control sets                                       |    39 |
+|    Minimum number of control sets                        |    39 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |   137 |
@@ -39,9 +39,9 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    40 |
+| Total control sets |    39 |
 | >= 0 to < 4        |    10 |
-| >= 4 to < 6        |    12 |
+| >= 4 to < 6        |    11 |
 | >= 6 to < 8        |     7 |
 | >= 8 to < 10       |     7 |
 | >= 10 to < 12      |     1 |
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               4 |            1 |
-| No           | No                    | Yes                    |             273 |           88 |
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |             269 |           90 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             132 |           54 |
+| Yes          | No                    | Yes                    |             132 |           53 |
 | Yes          | Yes                   | No                     |               6 |            1 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,49 +70,48 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------------------------------+-----------------------------------------------+------------------+------------------+----------------+--------------+
-|                      Clock Signal                      |                 Enable Signal                 | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+--------------------------------------------------------+-----------------------------------------------+------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG                                         | u_uart_clock/u_uart_tx2/tx_next               | reset_IBUF       |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                                         | uuart/urx/data[6]_i_1_n_0                     | reset_IBUF       |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                                         | uuart/urx/data[4]_i_1_n_0                     | reset_IBUF       |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                                         | uuart/urx/data_next[2]                        | reset_IBUF       |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                                         | uuart/urx/data_next[3]                        | reset_IBUF       |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                                         | uuart/urx/data_next[0]                        | reset_IBUF       |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                                         | uuart/urx/data[5]_i_1_n_0                     | reset_IBUF       |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                                         | uuart/urx/data[7]_i_1_n_0                     | reset_IBUF       |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                                         | uuart/urx/data_next[1]                        | reset_IBUF       |                1 |              1 |         1.00 |
-|  ustopwatch/U_counter/u_clock_div/CLK                  |                                               | reset_IBUF       |                2 |              3 |         1.50 |
-|  clk_IBUF_BUFG                                         | u_uart_clock/uclock_Tx/E[0]                   | reset_IBUF       |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG                                         | u_uart_clock/uclock_Tx/state[3]_i_1_n_0       | reset_IBUF       |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                                         | u_uart_clock/u_uart_tx2/data_count_next       | reset_IBUF       |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG                                         | uuart/u_uart_tx/E[0]                          | reset_IBUF       |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                                         | uuart/u_uart_tx/data_count_next               | reset_IBUF       |                1 |              4 |         4.00 |
-|  u_uart_clock/uclock_Tx/data_count_next_reg[3]_i_2_n_0 |                                               |                  |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                                         | uuart/u_uart_tx/tick_count_next               | reset_IBUF       |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                                         | u_uart_clock/u_uart_tx2/tick_count_next       | reset_IBUF       |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG                                         | uuart/urxa/ufifo_cu/w_ptr[3]_i_1_n_0          | reset_IBUF       |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                                         | ustopwatch/u_clock_set/tick_reg_reg[0]        | reset_IBUF       |                3 |              5 |         1.67 |
-|  clk_IBUF_BUFG                                         | uuart/urx/tick_count_next                     | reset_IBUF       |                2 |              5 |         2.50 |
-|  clk_IBUF_BUFG                                         | u_uart_clock/uclock_Tx/start_next             | reset_IBUF       |                3 |              5 |         1.67 |
-|  clk_IBUF_BUFG                                         | ustopwatch/U_CU2/FSM_onehot_state_reg[2]_1[0] | reset_IBUF       |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG                                         | ustopwatch/U_CU2/FSM_onehot_state_reg[2]_3[0] | reset_IBUF       |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG                                         | ustopwatch/u_clock_set/tick_reg_reg_0[0]      | reset_IBUF       |                3 |              6 |         2.00 |
-|  clk_IBUF_BUFG                                         | ustopwatch/u_clock_set/E[0]                   | reset_IBUF       |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG                                         | ustopwatch/U_CU2/FSM_onehot_state_reg[2]_2[0] | reset_IBUF       |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG                                         | ustopwatch/dps/uclk_100/E[0]                  | reset_IBUF       |                3 |              7 |         2.33 |
-|  clk_IBUF_BUFG                                         | ustopwatch/U_CU2/FSM_onehot_state_reg[2]_0[0] | reset_IBUF       |                3 |              7 |         2.33 |
-|  ustopwatch/u_btn/r_1khz_reg_n_0                       |                                               | reset_IBUF       |                2 |              8 |         4.00 |
-|  ustopwatch/u_btn2/r_1khz_reg_n_0                      |                                               | reset_IBUF       |                2 |              8 |         4.00 |
-|  ustopwatch/u_btn3/r_1khz_reg_n_0                      |                                               | reset_IBUF       |                2 |              8 |         4.00 |
-|  ustopwatch/u_btn4/r_1khz_reg_n_0                      |                                               | reset_IBUF       |                2 |              8 |         4.00 |
-|  ustopwatch/u_btn5/r_1khz_reg_n_0                      |                                               | reset_IBUF       |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG                                         | uuart/utx/ufifo_cu/E[0]                       | reset_IBUF       |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG                                         | u_uart_clock/uclock_Tx/E[0]                   |                  |                1 |              8 |         8.00 |
-|  clk_IBUF_BUFG                                         | u_uart_clock/utx2/ufifo_cu/E[0]               | reset_IBUF       |                2 |             10 |         5.00 |
-|  clk_IBUF_BUFG                                         | uuart/urx/I16                                 |                  |                2 |             16 |         8.00 |
-|  clk_IBUF_BUFG                                         | ustopwatch/U_CU2/E[0]                         | reset_IBUF       |                6 |             20 |         3.33 |
-|  clk_IBUF_BUFG                                         |                                               | reset_IBUF       |               75 |            230 |         3.07 |
-+--------------------------------------------------------+-----------------------------------------------+------------------+------------------+----------------+--------------+
++---------------------------------------+--------------------------------------------------------+------------------+------------------+----------------+--------------+
+|              Clock Signal             |                      Enable Signal                     | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------------+--------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG                        | u_uart_clock/u_uart_tx2/tx_next                        | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                        | uuart/urx/data[6]_i_1_n_0                              | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                        | uuart/urx/data[5]_i_1_n_0                              | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                        | uuart/urx/data_next[3]                                 | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                        | uuart/urx/data_next[1]                                 | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                        | uuart/urx/data_next[0]                                 | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                        | uuart/urx/data[4]_i_1_n_0                              | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                        | uuart/urx/data[7]_i_1_n_0                              | reset_IBUF       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                        | uuart/urx/data_next[2]                                 | reset_IBUF       |                1 |              1 |         1.00 |
+|  ustopwatch/U_counter/u_clock_div/CLK |                                                        | reset_IBUF       |                1 |              3 |         3.00 |
+|  clk_IBUF_BUFG                        | uuart/u_uart_tx/E[0]                                   | reset_IBUF       |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                        | u_uart_clock/u_uart_tx2/data_count_next                | reset_IBUF       |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                        | u_uart_clock/uclock_Tx/E[0]                            | reset_IBUF       |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                        | u_uart_clock/uclock_Tx/FSM_sequential_state[3]_i_1_n_0 | reset_IBUF       |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                        | uuart/urxa/ufifo_cu/w_ptr[3]_i_1_n_0                   | reset_IBUF       |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                        | u_uart_clock/u_uart_tx2/tick_count_next                | reset_IBUF       |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                        | uuart/u_uart_tx/tick_count_next                        | reset_IBUF       |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                        | uuart/u_uart_tx/data_count_next                        | reset_IBUF       |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                        | u_uart_clock/uclock_Tx/start_next                      | reset_IBUF       |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                        | ustopwatch/u_clock_set/tick_reg_reg[0]                 | reset_IBUF       |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                        | uuart/urx/tick_count[4]_i_1_n_0                        | reset_IBUF       |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                        | ustopwatch/U_CU2/FSM_onehot_state_reg[2]_1[0]          | reset_IBUF       |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                        | ustopwatch/U_CU2/FSM_onehot_state_reg[2]_2[0]          | reset_IBUF       |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                        | ustopwatch/U_CU2/FSM_onehot_state_reg[2]_3[0]          | reset_IBUF       |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                        | ustopwatch/u_clock_set/tick_reg_reg_0[0]               | reset_IBUF       |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG                        | ustopwatch/u_clock_set/E[0]                            | reset_IBUF       |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                        | ustopwatch/U_CU2/FSM_onehot_state_reg[2]_0[0]          | reset_IBUF       |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG                        | ustopwatch/dps/uclk_100/E[0]                           | reset_IBUF       |                3 |              7 |         2.33 |
+|  ustopwatch/u_btn3/r_1khz_reg_n_0     |                                                        | reset_IBUF       |                1 |              8 |         8.00 |
+|  ustopwatch/u_btn4/r_1khz_reg_n_0     |                                                        | reset_IBUF       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                        | uuart/utx/ufifo_cu/E[0]                                | reset_IBUF       |                3 |              8 |         2.67 |
+|  ustopwatch/u_btn5/r_1khz_reg_n_0     |                                                        | reset_IBUF       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                        | u_uart_clock/uclock_Tx/E[0]                            |                  |                1 |              8 |         8.00 |
+|  ustopwatch/u_btn/r_1khz_reg_n_0      |                                                        | reset_IBUF       |                3 |              8 |         2.67 |
+|  ustopwatch/u_btn2/r_1khz_reg_n_0     |                                                        | reset_IBUF       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                        | u_uart_clock/utx2/ufifo_cu/E[0]                        | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG                        | uuart/urx/I16                                          |                  |                2 |             16 |         8.00 |
+|  clk_IBUF_BUFG                        | ustopwatch/U_CU2/E[0]                                  | reset_IBUF       |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG                        |                                                        | reset_IBUF       |               79 |            226 |         2.86 |
++---------------------------------------+--------------------------------------------------------+------------------+------------------+----------------+--------------+
 
 

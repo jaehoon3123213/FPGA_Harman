@@ -70,9 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
-set_param synth.incrementalSynthesisCache C:/Users/kccistc/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-14608-DESKTOP-7CFQ9ND/incrSyn
-set_param xicom.use_bs_reader 1
+set_param synth.incrementalSynthesisCache C:/Users/kccistc/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-7540-DESKTOP-7CFQ9ND/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -97,6 +95,7 @@ read_verilog -library xil_defaultlib {
   C:/FPGA_Harman/stopwatch_dote/stopwatch_dote.srcs/sources_1/imports/sources_1/new/stopwatch_dp.v
   C:/FPGA_Harman/stopwatch_dote/stopwatch_dote.srcs/sources_1/new/stopwatch_dp2.v
   C:/FPGA_Harman/stopwatch_dote/stopwatch_dote.srcs/sources_1/imports/sources_1/new/top_stopwatch.v
+  C:/FPGA_Harman/stopwatch_dote/stopwatch_dote.srcs/sources_1/new/uart.v
   C:/FPGA_Harman/stopwatch_dote/stopwatch_dote.srcs/sources_1/new/top_uart_stopwatch.v
 }
 OPTRACE "Adding files" END { }

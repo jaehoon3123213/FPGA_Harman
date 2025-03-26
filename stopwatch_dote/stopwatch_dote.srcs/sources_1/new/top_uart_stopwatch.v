@@ -34,10 +34,10 @@ module top_uart_stopwatch (
         .fnd_comm(fnd_comm),
         .fnd_font(fnd_font),
         .led(led),
-        .w_msec(w_msec),
-        .w_sec(w_sec),
-        .w_min(w_min),
-        .w_hour(w_hour)
+        .w_msec3(w_msec),
+        .w_sec3(w_sec),
+        .w_min3(w_min),
+        .w_hour3(w_hour)
     );
 
     uart_fsm uuart (
@@ -99,6 +99,7 @@ module uart_clock (
     );
     
     clock_tx_control uclock_Tx(
+    .w_msec(w_msec),
      .w_sec(w_sec2),
      .w_min(w_min2),
      .w_hour(w_hour2),
@@ -136,160 +137,158 @@ bit_asci u_bit3(
 
 endmodule
 
-module clock_tx_control (
-    input [7:0] w_sec,
-    input [7:0] w_min,
-    input [7:0] w_hour,
-    input [7:0] w_sec10,
-    input [7:0] w_min10,
-    input [7:0] w_hour10,
-    input w_empty2,
-    input clk,
-    input reset,
-    output tx_start,
-    output [7:0] data
-);
-    parameter IDLE = 4'b0000, START = 4'b0001, HOUR = 4'b0010, DOT = 4'b0011, MIN10= 4'b0100, MIN = 4'b0101, DOT2 =4'b0110, SEC10 = 4'b0111, SEC =4'b1000, SPACE = 4'b1001,WAIT = 4'b1010;
-    reg start, start_next;
-    reg [3:0] data_count, data_count_next;
-    reg [3:0]state, next;
-    reg [7:0] data_reg, data_next;
-    assign tx_start = start;
-    assign data = data_reg;
-    always @(posedge clk, posedge reset) begin
-        if (reset) begin
-            state <= 0;
-            start <= 0;
-            data_reg <= 0;
-            data_count <= 0;
-        end else begin
-            start <= start_next;
-            state <= next;
-            data_count <= data_count_next;
-            data_reg <= data_next;
+    module clock_tx_control (
+        input [6:0] w_msec,
+        input [6:0] w_sec,
+        input [6:0] w_min,
+        input [6:0] w_hour,
+        input [6:0] w_sec10,
+        input [6:0] w_min10,
+        input [6:0] w_hour10,
+        input w_empty2,
+        input clk,
+        input reset,
+        output tx_start,
+        output [7:0] data
+    );
+        parameter IDLE = 4'b0000, START = 4'b0001, HOUR = 4'b0010, DOT = 4'b0011, MIN10= 4'b0100, MIN = 4'b0101, DOT2 =4'b0110, SEC10 = 4'b0111, SEC =4'b1000, SPACE = 4'b1001,WAIT = 4'b1010;
+        reg start, start_next;
+        reg [3:0] data_count, data_count_next;
+        reg [3:0]state, next;
+        reg [7:0] data_reg, data_next;
+        assign tx_start = start;
+        assign data = data_reg;
+        always @(posedge clk, posedge reset) begin
+            if (reset) begin
+                state <= 0;
+                start <= 0;
+                data_reg <= 0;
+                data_count <= 0;
+            end else begin
+                start <= start_next;
+                state <= next;
+                data_count <= data_count_next;
+                data_reg <= data_next;
+            end
         end
-    end
-    always @(*) begin
-        start_next = 0;
-        next = state;
-        data_next = data_reg;
-        case (state)
-            IDLE:
-            if(w_sec == "0")
-             begin
-                next = START;
-            end
-            START: 
-            begin
-                start_next = 1;
-                data_next  = w_hour10;
-                next = HOUR;
-            end
-            HOUR: if(w_empty2)
-            begin
-                start_next = 1;
-                data_next  = w_hour;
-                next = DOT;
-            end
-            DOT: if(w_empty2)
-            begin
-                start_next = 1;
-                data_next  = ":";
-                next = MIN10;
-            end
-            MIN10: if(w_empty2)
-            begin
-                start_next = 1;
-                data_next  = w_min10; 
-                next = MIN;
-            end
-            MIN: if(w_empty2)
-            begin
-                start_next = 1;
-                data_next  = w_min;
-                next = DOT2;
-            end
-             DOT2: if(w_empty2)
-            begin
-                start_next = 1;
-                data_next  = ":";
-                next = SEC10;
-            end
-            SEC10: if(w_empty2)
-            begin
-                start_next = 1;
-                data_next = w_sec10;
-                next = SEC;
-            end
-                SEC: if(w_empty2)
-            begin
-                start_next = 1;
-                data_next = w_sec;
-                next = SPACE;
-            end
-            SPACE: if(w_empty2)
-            begin
-                start_next = 1;
-                data_next = "\n";
-                data_count_next = data_count +1;
-                if (data_count == 10) begin
-                 next = WAIT;
-                 data_count_next =0;
-                end
-            end
-            
-            WAIT: begin
-                if(w_sec == "1")
+        always @(*) begin
+            start_next = 0;
+            next = state;
+            data_next = data_reg;
+            data_count_next = data_count;
+            case (state)
+                IDLE:
+                if(w_msec == 00)
                 begin
-                    next = IDLE;
+                    next = START;
                 end
-            end
+                START: 
+                begin
+                    start_next = 1;
+                    data_next  = w_hour10;
+                    next = HOUR;
+                end
+                HOUR: 
+                begin
+                    start_next = 1;
+                    data_next  = w_hour;
+                    next = DOT;
+                end
+                DOT: 
+                begin
+                    start_next = 1;
+                    data_next  = ":";
+                    next = MIN10;
+                end
+                MIN10: 
+                begin
+                    start_next = 1;
+                    data_next  = w_min10; 
+                    next = MIN;
+                end
+                MIN: 
+                begin
+                    start_next = 1;
+                    data_next  = w_min;
+                    next = DOT2;
+                end
+                DOT2: 
+                begin
+                    start_next = 1;
+                    data_next  = ":";
+                    next = SEC10;
+                end
+                SEC10: 
+                begin
+                    start_next = 1;
+                    data_next = w_sec10;
+                    next = SEC;
+                end
+                    SEC:
+                begin
+                    start_next = 1;
+                    data_next = w_sec;
+                    next = SPACE;
+                end
+                SPACE: 
+                begin
+                    start_next = 1;
+                    data_next = "\n";
+                    next = WAIT;
+                end
+                
+                WAIT: begin
+                    if(w_msec == 20)
+                    begin
+                        next = IDLE;
+                    end
+                end
 
+            endcase
+        end
+
+
+    endmodule
+
+    module bit_asci(
+    input [6:0] data,
+    output reg [7:0] o_data, o_data10
+    );
+    reg [7:0] data0,data10;
+    always @(*) begin
+        data0 = data % 10;
+        data10 = data /10 %10;
+        case (data0)
+            0 : o_data = "0"; 
+            1 : o_data = "1" ;
+            2 : o_data = "2" ;
+            3 : o_data = "3"; 
+            4 : o_data = "4"; 
+            5 : o_data = "5"; 
+            6 : o_data = "6"; 
+            7 : o_data = "7" ;
+            8 : o_data = "8"; 
+            9 : o_data = "9" ;
+            
+            default: o_data = "0";
+        endcase
+            case (data10)
+            0 : o_data10 = "0"; 
+            1 : o_data10 = "1" ;
+            2 : o_data10 = "2" ;
+            3 : o_data10 = "3"; 
+            4 : o_data10 = "4"; 
+            5 : o_data10 = "5"; 
+            6 : o_data10 = "6"; 
+            7 : o_data10 = "7" ;
+            8 : o_data10 = "8"; 
+            9 : o_data10 = "9" ;
+            default: o_data10 = "0";
         endcase
     end
 
 
-endmodule
-
-module bit_asci(
-input [6:0] data,
-output reg [7:0] o_data, o_data10
-);
-reg [7:0] data0,data10;
-always @(*) begin
-    data0 = data % 10;
-    data10 = data /10 %10;
-    case (data0)
-        0 : o_data = "0"; 
-        1 : o_data = "1" ;
-        2 : o_data = "2" ;
-        3 : o_data = "3"; 
-        4 : o_data = "4"; 
-        5 : o_data = "5"; 
-        6 : o_data = "6"; 
-        7 : o_data = "7" ;
-        8 : o_data = "8"; 
-        9 : o_data = "9" ;
-        
-        default: o_data = "0";
-    endcase
-        case (data10)
-        0 : o_data10 = "0"; 
-        1 : o_data10 = "1" ;
-        2 : o_data10 = "2" ;
-        3 : o_data10 = "3"; 
-        4 : o_data10 = "4"; 
-        5 : o_data10 = "5"; 
-        6 : o_data10 = "6"; 
-        7 : o_data10 = "7" ;
-        8 : o_data10 = "8"; 
-        9 : o_data10 = "9" ;
-        default: o_data10 = "0";
-    endcase
-end
-
-
-endmodule
+    endmodule
 
     
 
@@ -385,7 +384,6 @@ module uart_rx (
     assign o_data  = data;
     assign rx_done = r_rx_done;
     assign o_data  = data;
-
 
     always @(posedge clk, posedge reset) begin
         if (reset) begin

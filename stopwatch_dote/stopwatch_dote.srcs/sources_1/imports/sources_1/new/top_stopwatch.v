@@ -13,15 +13,15 @@ module top_stopwatch (
     output [3:0] fnd_comm,
     output [7:0] fnd_font,
     output [3:0] led,
-    output [6:0] w_msec,
-    output [6:0] w_sec,
-    output [6:0] w_min,
-    output [6:0] w_hour
+    output [6:0] w_msec3,
+    output [6:0] w_sec3,
+    output [6:0] w_min3,
+    output [6:0] w_hour3
 );
 
     
     wire [6:0] w_msec2, w_sec2, w_min2, w_hour2;
-    wire [6:0] w_msec3, w_sec3, w_min3, w_hour3;
+    wire [6:0] w_msec, w_sec, w_min, w_hour;
     wire w_run,w_clear;
     wire [1:0] w_set;
     wire w_btn_run,w_btn_clear,w_btn_up,w_btn_down,w_btn_set;
