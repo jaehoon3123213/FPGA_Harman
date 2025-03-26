@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Mar 25 17:15:41 2025
-# Process ID: 13440
+# Start of session at: Wed Mar 26 09:58:43 2025
+# Process ID: 8396
 # Current directory: C:/FPGA_Harman/top_sensor/top_sensor.runs/synth_1
 # Command line: vivado.exe -log top_sensor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_sensor.tcl
 # Log file: C:/FPGA_Harman/top_sensor/top_sensor.runs/synth_1/top_sensor.vds
@@ -17,26 +17,26 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 19348
+INFO: [Synth 8-7075] Helper process launched with PID 22716
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1102.832 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1104.277 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_sensor' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:23]
-INFO: [Synth 8-6157] synthesizing module 'sensor_cu' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:86]
+INFO: [Synth 8-6157] synthesizing module 'sensor_cu' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:105]
 	Parameter IDLE bound to: 4'b0000 
 	Parameter START bound to: 4'b0001 
 	Parameter WAIT bound to: 4'b0010 
 	Parameter DATA bound to: 4'b0011 
 	Parameter MAX_DISTANCE bound to: 390 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:128]
-INFO: [Synth 8-6155] done synthesizing module 'sensor_cu' (1#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:86]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:147]
+INFO: [Synth 8-6155] done synthesizing module 'sensor_cu' (1#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:105]
 INFO: [Synth 8-6157] synthesizing module 'btn_debounce' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/imports/Source/btn_debounce.v:2]
 WARNING: [Synth 8-567] referenced signal 'q_reg' should be on the sensitivity list [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/imports/Source/btn_debounce.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'btn_debounce' (2#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/imports/Source/btn_debounce.v:2]
-INFO: [Synth 8-6157] synthesizing module 'tick_1us' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:174]
+INFO: [Synth 8-6157] synthesizing module 'tick_1us' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:193]
 	Parameter BAUD_RATE bound to: 9600 - type: integer 
 	Parameter BAUD_COUNT bound to: 100 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'tick_1us' (3#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:174]
+INFO: [Synth 8-6155] done synthesizing module 'tick_1us' (3#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:193]
 INFO: [Synth 8-6157] synthesizing module 'fnd_controlloer' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/fnd.v:93]
 INFO: [Synth 8-6157] synthesizing module 'clock_div' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/fnd.v:20]
 	Parameter FCOUNT bound to: 100000 - type: integer 
@@ -55,25 +55,25 @@ INFO: [Synth 8-226] default block is never used [C:/FPGA_Harman/top_sensor/top_s
 INFO: [Synth 8-6155] done synthesizing module 'bcdtoseg' (9#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/fnd.v:146]
 INFO: [Synth 8-6155] done synthesizing module 'fnd_controlloer' (10#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/fnd.v:93]
 INFO: [Synth 8-6157] synthesizing module 'uart_clock' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:24]
-INFO: [Synth 8-6157] synthesizing module 'fifo' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:316]
-INFO: [Synth 8-6157] synthesizing module 'register_file' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:356]
-INFO: [Synth 8-6155] done synthesizing module 'register_file' (11#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:356]
-INFO: [Synth 8-6157] synthesizing module 'fifo_cu' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:378]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:415]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_cu' (12#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:378]
-INFO: [Synth 8-6155] done synthesizing module 'fifo' (13#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:316]
-INFO: [Synth 8-6157] synthesizing module 'tick_9600hz' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:274]
+INFO: [Synth 8-6157] synthesizing module 'fifo' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:358]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:398]
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (11#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:398]
+INFO: [Synth 8-6157] synthesizing module 'fifo_cu' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:420]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:457]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_cu' (12#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:420]
+INFO: [Synth 8-6155] done synthesizing module 'fifo' (13#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:358]
+INFO: [Synth 8-6157] synthesizing module 'tick_9600hz' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:316]
 	Parameter BAUD_RATE bound to: 9600 - type: integer 
 	Parameter BAUD_COUNT bound to: 651 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'tick_9600hz' (14#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:274]
-INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:484]
+INFO: [Synth 8-6155] done synthesizing module 'tick_9600hz' (14#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:316]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:526]
 	Parameter R_IDLE bound to: 4'b0000 
 	Parameter START bound to: 4'b0001 
 	Parameter DATA_STATE bound to: 4'b0010 
 	Parameter STOP bound to: 4'b0011 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:527]
-INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (15#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:484]
-INFO: [Synth 8-6157] synthesizing module 'clock_tx_control' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:100]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:569]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (15#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:526]
+INFO: [Synth 8-6157] synthesizing module 'clock_tx_control' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:142]
 	Parameter IDLE bound to: 4'b0000 
 	Parameter DATA bound to: 4'b0001 
 	Parameter DATA2 bound to: 4'b0010 
@@ -85,27 +85,40 @@ INFO: [Synth 8-6157] synthesizing module 'clock_tx_control' [C:/FPGA_Harman/top_
 	Parameter DATA8 bound to: 4'b1000 
 	Parameter SPACE bound to: 4'b1001 
 	Parameter WAIT bound to: 4'b1010 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:138]
-INFO: [Synth 8-6155] done synthesizing module 'clock_tx_control' (16#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:100]
-INFO: [Synth 8-6157] synthesizing module 'data_save' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:456]
-INFO: [Synth 8-6155] done synthesizing module 'data_save' (17#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:456]
-INFO: [Synth 8-6157] synthesizing module 'bit_asci' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:201]
-INFO: [Synth 8-6155] done synthesizing module 'bit_asci' (18#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:201]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:180]
+INFO: [Synth 8-6155] done synthesizing module 'clock_tx_control' (16#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:142]
+INFO: [Synth 8-6157] synthesizing module 'data_save' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:498]
+INFO: [Synth 8-6155] done synthesizing module 'data_save' (17#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:498]
+INFO: [Synth 8-6157] synthesizing module 'bit_asci' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:243]
+INFO: [Synth 8-6155] done synthesizing module 'bit_asci' (18#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:243]
 INFO: [Synth 8-6155] done synthesizing module 'uart_clock' (19#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'top_sensor' (20#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:23]
+WARNING: [Synth 8-7071] port 'rx' of module 'uart_clock' is unconnected for instance 'uuart' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:70]
+WARNING: [Synth 8-7023] instance 'uuart' of module 'uart_clock' has 7 connections declared, but only 6 given [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:70]
+INFO: [Synth 8-6157] synthesizing module 'uart_fsm' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:625]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:698]
+	Parameter R_IDLE bound to: 4'b0000 
+	Parameter START bound to: 4'b0001 
+	Parameter DATA_STATE bound to: 4'b0010 
+	Parameter STOP bound to: 4'b0011 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (20#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:698]
+INFO: [Synth 8-6155] done synthesizing module 'uart_fsm' (21#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:625]
+INFO: [Synth 8-6157] synthesizing module 'transasci' [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:101]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:124]
+INFO: [Synth 8-6155] done synthesizing module 'transasci' (22#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/new/uart.v:101]
+INFO: [Synth 8-6155] done synthesizing module 'top_sensor' (23#1) [C:/FPGA_Harman/top_sensor/top_sensor.srcs/sources_1/imports/sources_1/new/sensor_cu.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1102.832 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1104.277 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1102.832 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1104.277 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1102.832 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1104.277 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1102.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1104.277 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -116,30 +129,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_sensor_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1175.074 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1179.934 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1175.074 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1179.934 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1175.074 ; gain = 72.242
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1179.934 ; gain = 75.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1175.074 ; gain = 72.242
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1179.934 ; gain = 75.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1175.074 ; gain = 72.242
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1179.934 ; gain = 75.656
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'sensor_cu'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'clock_tx_control'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -175,8 +189,17 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
                     WAIT |                      10000000000 |                             1010
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'clock_tx_control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  R_IDLE |                               00 |                               00
+                   START |                               01 |                               01
+              DATA_STATE |                               10 |                               10
+                    STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1175.074 ; gain = 72.242
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1179.934 ; gain = 75.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -186,37 +209,44 @@ Detailed RTL Component Info :
 	   2 Input   18 Bit       Adders := 1     
 	   2 Input   17 Bit       Adders := 1     
 	   2 Input   16 Bit       Adders := 1     
-	   2 Input   10 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
 	   2 Input    7 Bit       Adders := 1     
 	   2 Input    6 Bit       Adders := 2     
-	   2 Input    4 Bit       Adders := 6     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 18    
 	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
 	               18 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
-	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 4     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 5     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 4     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 11    
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 11    
+	                1 Bit    Registers := 20    
 +---Muxes : 
 	   2 Input   18 Bit        Muxes := 1     
 	   2 Input   17 Bit        Muxes := 1     
 	   5 Input   16 Bit        Muxes := 1     
 	  11 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
 	   2 Input    6 Bit        Muxes := 1     
-	   4 Input    4 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 3     
+	   4 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 5     
 	   5 Input    4 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
 	   4 Input    3 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 3     
-	   4 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 6     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 11    
 	   5 Input    1 Bit        Muxes := 5     
-	   4 Input    1 Bit        Muxes := 12    
+	   4 Input    1 Bit        Muxes := 34    
 	  11 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -234,7 +264,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1175.074 ; gain = 72.242
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1179.934 ; gain = 75.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -245,6 +275,7 @@ Distributed RAM: Preliminary Mapping	Report (see note below)
 |Module Name | RTL Object             | Inference | Size (Depth x Width) | Primitives  | 
 +------------+------------------------+-----------+----------------------+-------------+
 |uuart       | utx2/uregister/ram_reg | Implied   | 16 x 8               | RAM32M x 2	 | 
+|uuart_fsm   | urxa/uregister/ram_reg | Implied   | 16 x 8               | RAM32M x 2	 | 
 +------------+------------------------+-----------+----------------------+-------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
@@ -255,13 +286,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1175.074 ; gain = 72.242
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1179.934 ; gain = 75.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1235.301 ; gain = 132.469
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1232.168 ; gain = 127.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -272,6 +303,7 @@ Distributed RAM: Final Mapping	Report
 |Module Name | RTL Object             | Inference | Size (Depth x Width) | Primitives  | 
 +------------+------------------------+-----------+----------------------+-------------+
 |uuart       | utx2/uregister/ram_reg | Implied   | 16 x 8               | RAM32M x 2	 | 
+|uuart_fsm   | urxa/uregister/ram_reg | Implied   | 16 x 8               | RAM32M x 2	 | 
 +------------+------------------------+-----------+----------------------+-------------+
 
 ---------------------------------------------------------------------------------
@@ -281,7 +313,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1240.961 ; gain = 138.129
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1239.832 ; gain = 135.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -299,37 +331,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1255.707 ; gain = 152.875
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1253.637 ; gain = 149.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1255.707 ; gain = 152.875
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1253.637 ; gain = 149.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1255.707 ; gain = 152.875
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1253.637 ; gain = 149.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1255.707 ; gain = 152.875
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1253.637 ; gain = 149.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1255.707 ; gain = 152.875
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1253.637 ; gain = 149.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1255.707 ; gain = 152.875
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1253.637 ; gain = 149.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -347,42 +379,40 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    88|
-|3     |LUT1   |    26|
-|4     |LUT2   |   189|
-|5     |LUT3   |   104|
-|6     |LUT4   |   118|
-|7     |LUT5   |    86|
-|8     |LUT6   |   195|
-|9     |RAM32M |     2|
-|10    |FDCE   |   132|
-|11    |FDPE   |     3|
+|3     |LUT1   |    31|
+|4     |LUT2   |   202|
+|5     |LUT3   |   121|
+|6     |LUT4   |   140|
+|7     |LUT5   |   101|
+|8     |LUT6   |   216|
+|9     |RAM32M |     4|
+|10    |FDCE   |   192|
+|11    |FDPE   |     5|
 |12    |FDRE   |     8|
-|13    |IBUF   |     4|
+|13    |IBUF   |     5|
 |14    |OBUF   |    14|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1255.707 ; gain = 152.875
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1253.637 ; gain = 149.359
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1255.707 ; gain = 80.633
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1255.707 ; gain = 152.875
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1253.637 ; gain = 73.703
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1253.637 ; gain = 149.359
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1267.813 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 90 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1265.785 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 92 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1268.770 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1265.785 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  A total of 4 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-67 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+76 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1268.770 ; gain = 165.938
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1265.785 ; gain = 161.508
 INFO: [Common 17-1381] The checkpoint 'C:/FPGA_Harman/top_sensor/top_sensor.runs/synth_1/top_sensor.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_sensor_utilization_synth.rpt -pb top_sensor_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 25 17:16:13 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 26 09:59:16 2025...

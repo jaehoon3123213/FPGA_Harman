@@ -27,7 +27,8 @@ module uart_clock (
     input finish_tick,
     input start_trigger,
     output tx,
-    input [15:0] sensor_data
+    input [15:0] sensor_data,
+    input rx
 );
 
 
@@ -35,7 +36,7 @@ module uart_clock (
     wire [7:0] w_o_data10;
     wire [7:0] w_o_data100;
     wire [7:0] w_o_data1000;
-    wire [7:0] w_data,w_data2,w_data3;
+    wire [7:0] w_data, w_data2, w_data3;
 
 
     fifo utx2 (
@@ -71,8 +72,8 @@ module uart_clock (
         .clk(clk),
         .reset(reset),
         .tx_start(w_tx_start),
-             .finish_tick(finish_tick),
-     .start_trigger(start_trigger),
+        .finish_tick(finish_tick),
+        .start_trigger(start_trigger),
         .data(w_data),
         .w_empty2(w_empty2)
     );
@@ -92,7 +93,48 @@ module uart_clock (
     );
 
 
+
 endmodule
+
+
+
+module transasci (
+    input [7:0] rx_data,
+    input clk,
+    input rx_done,
+    input reset,
+    output btn
+);
+
+    reg btn_reg, btn_next;
+    assign btn = btn_reg;
+
+
+    always @(posedge clk, posedge reset) begin
+        if (reset) begin
+            btn_reg <= 0;
+        end else begin
+            btn_reg <= btn_next;
+        end
+    end
+    always @(*) begin
+        btn_next = 1'b0;
+
+        if (rx_done == 1) begin
+            case (rx_data)
+                "m": btn_next = 1'b1;
+            endcase
+        end
+    end
+
+
+
+
+
+endmodule
+
+
+
 
 
 
@@ -205,12 +247,12 @@ module bit_asci (
     o_data100,
     o_data1000
 );
-    reg [7:0] data0, data10,data100,data1000;
+    reg [7:0] data0, data10, data100, data1000;
     always @(*) begin
-        data0  = data % 10;
+        data0 = data % 10;
         data10 = data / 10 % 10;
-        data100 = data /100 %10;
-        data1000 = data /1000 %10;
+        data100 = data / 100 % 10;
+        data1000 = data / 1000 % 10;
         case (data0)
             0: o_data = "0";
             1: o_data = "1";
@@ -238,7 +280,7 @@ module bit_asci (
             9: o_data10 = "9";
             default: o_data10 = "0";
         endcase
-                case (data100)
+        case (data100)
             0: o_data100 = "0";
             1: o_data100 = "1";
             2: o_data100 = "2";
@@ -251,7 +293,7 @@ module bit_asci (
             9: o_data100 = "9";
             default: o_data100 = "0";
         endcase
-                case (data1000)
+        case (data1000)
             0: o_data1000 = "0";
             1: o_data1000 = "1";
             2: o_data1000 = "2";
@@ -265,7 +307,7 @@ module bit_asci (
             default: o_data1000 = "0";
         endcase
     end
-    
+
 
 
 endmodule
@@ -578,3 +620,170 @@ module uart_tx (
         endcase
     end
 endmodule
+
+
+module uart_fsm (
+    input reset,
+    input clk,
+    output tx,
+    inout w_empty,
+    output [7:0] w_o_data2,
+    input rx
+);
+    wire w_tick, w_btn_start;
+    wire w_tx_done, w_rx_done;
+    wire [7:0] w_o_data, w_o_data3, w_o_data4;
+
+
+    uart_tx u_uart_tx (
+        .clk(clk),
+        .reset(reset),
+        .tick(w_tick),
+        .data_in(w_o_data4),
+        .start_trigger(~w_empty2 & ~tx_done),
+        .o_tx(tx),
+        .tx_done(tx_done)
+    );
+
+    uart_rx urx (
+        .clk(clk),
+        .reset(reset),
+        .tick(w_tick),
+        .rx(rx),
+        .rx_done(w_rx_done),
+        .o_data(w_o_data)
+    );
+
+    tick_9600hz utick9600hz (
+        .clk  (clk),
+        .reset(reset),
+        .tick (w_tick)
+    );
+
+    fifo urxa (
+        .clk(clk),
+        .reset(reset),
+        .wdata(w_o_data),
+        .wr(w_rx_done),
+        .rd(~w_full),
+        .rdata(w_o_data2),
+        .empty(w_empty),
+        .full()
+    );
+    fifo utx (
+        .clk(clk),
+        .reset(reset),
+        .wdata(w_o_data2),
+        .wr(~w_empty),
+        .rd(~w_empty2 & ~tx_done),
+        .rdata(w_o_data3),
+        .empty(w_empty2),
+        .full(w_full)
+    );
+    data_save d_save (
+        .clk(clk),
+        .reset(reset),
+        .rd(~w_empty2),
+        .data_in(w_o_data3),
+        .data_out(w_o_data4)
+    );
+
+
+endmodule
+
+
+
+
+
+module uart_rx (
+    input clk,
+    input reset,
+    input tick,
+    input rx,
+    output rx_done,
+    output [7:0] o_data
+);
+
+
+    reg [7:0] data, data_next;
+    reg [4:0] tick_count, tick_count_next;
+    reg [1:0] state, next;
+    reg r_rx_done, r_rx_done_next;
+    reg [3:0] data_count, data_count_next;
+    parameter R_IDLE = 4'h0, START = 4'h1, DATA_STATE = 4'h2, STOP = 4'h3;
+    assign o_data  = data;
+    assign rx_done = r_rx_done;
+    assign o_data  = data;
+
+    always @(posedge clk, posedge reset) begin
+        if (reset) begin
+            state <= 0;
+            data <= 0;
+            data_count <= 0;
+            tick_count <= 0;
+            r_rx_done <= 0;
+        end else begin
+            state <= next;
+            r_rx_done <= r_rx_done_next;
+            data_count <= data_count_next;
+            tick_count <= tick_count_next;
+            data <= data_next;
+
+        end
+    end
+
+
+    always @(*) begin
+        next = state;
+        r_rx_done_next = 0;
+        data_count_next = data_count;
+        tick_count_next = tick_count;
+        data_next = data;
+        case (state)
+            R_IDLE: begin
+                if (rx == 0) begin
+                    next = START;
+                end
+            end
+            START: begin
+                if (tick == 1) begin
+                    tick_count_next = tick_count + 1;
+                    if (tick_count_next == 8) begin
+                        next = DATA_STATE;
+                        tick_count_next = 0;
+                    end
+                end
+            end
+            DATA_STATE: begin
+                if (tick == 1) begin
+                    tick_count_next = tick_count + 1;
+                    if (tick_count_next == 16) begin
+                        data_next[data_count] = rx;
+                        tick_count_next = 0;
+                        data_count_next = data_count + 1;
+                        if (data_count_next == 8) begin
+                            data_count_next = 0;
+                            tick_count_next = 0;
+                            next = STOP;
+                        end
+                    end
+                end
+            end
+
+            STOP: begin
+                if (tick == 1) begin
+                    tick_count_next = tick_count + 1;
+                    if (tick_count_next == 24) begin
+                        next = R_IDLE;
+                        tick_count_next = 0;
+                        r_rx_done_next = 1;
+                    end
+                end
+            end
+
+
+        endcase
+
+    end
+endmodule
+

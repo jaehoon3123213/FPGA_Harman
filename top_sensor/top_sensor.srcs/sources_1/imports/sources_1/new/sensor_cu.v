@@ -28,17 +28,19 @@ module top_sensor (
     output start_tick,
     output [7:0] seg_out,
     output [3:0] seg_comm,
-    output tx
+    output tx,
+    input rx
 );
     wire w_tick;
     wire w_start_trigger;
     wire [15:0] w_o_data;
+    wire [7:0] w_o_data2;
     wire finish_tick;
     sensor_cu usensor (
         .clk(clk),
         .reset(reset),
         .tick(w_tick),
-        .start_trigger(w_start_trigger),
+        .start_trigger(w_start_trigger | w_btn ),
         .data(data),
         .start_tick(start_tick),
         .o_data(w_o_data),
@@ -69,10 +71,27 @@ module top_sensor (
         .reset(reset),
         .clk(clk),
         .finish_tick(finish_tick),
-        .start_trigger(w_start_trigger),
+        .start_trigger(w_start_trigger | w_btn),
         .tx(tx),
         .sensor_data(w_o_data)
     );
+
+    
+    uart_fsm uuart_fsm (
+        .reset(reset),
+        .clk(clk),
+        .tx(),
+        .w_empty(w_empty),
+        .w_o_data2(w_o_data2),
+        .rx(rx)
+    );
+    transasci utrans (
+     .rx_data(w_o_data2),
+     .clk(clk),
+     .rx_done(~w_empty),
+     .reset(reset),
+         .btn(w_btn)
+);
 
     // ila_0 uila (
     //     .clk(clk),

@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Mar 25 17:16:19 2025
-# Process ID: 10704
+# Start of session at: Wed Mar 26 09:59:22 2025
+# Process ID: 19876
 # Current directory: C:/FPGA_Harman/top_sensor/top_sensor.runs/impl_1
 # Command line: vivado.exe -log top_sensor.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_sensor.tcl -notrace
 # Log file: C:/FPGA_Harman/top_sensor/top_sensor.runs/impl_1/top_sensor.vdi
@@ -14,24 +14,22 @@ Command: link_design -top top_sensor -part xc7a35tcpg236-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1103.840 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 90 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1103.930 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 92 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [C:/FPGA_Harman/top_sensor/top_sensor.srcs/constrs_1/imports/FPGA_Harman/Basys-3-Master.xdc]
 Finished Parsing XDC File [C:/FPGA_Harman/top_sensor/top_sensor.srcs/constrs_1/imports/FPGA_Harman/Basys-3-Master.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1103.840 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1103.930 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  A total of 4 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
 
 7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1103.840 ; gain = 0.000
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
+link_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1103.930 ; gain = 0.000
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -42,54 +40,54 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.572 . Memory (MB): peak = 1103.840 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.560 . Memory (MB): peak = 1103.930 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 26dfd01fd
+Ending Cache Timing Information Task | Checksum: 1172e8f46
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1450.754 ; gain = 346.914
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1449.805 ; gain = 345.875
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1d48ab759
+Phase 1 Retarget | Checksum: 1a6324c2f
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1662.281 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1658.797 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 2 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 24713389a
+Phase 2 Constant propagation | Checksum: 18de002d8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1662.281 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1658.797 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1c9ba7fe5
+Phase 3 Sweep | Checksum: cf5425c0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1662.281 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1658.797 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 1c9ba7fe5
+Phase 4 BUFG optimization | Checksum: cf5425c0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1662.281 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1658.797 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 1c9ba7fe5
+Phase 5 Shift Register Optimization | Checksum: cf5425c0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1662.281 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1658.797 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1c9ba7fe5
+Phase 6 Post Processing Netlist | Checksum: cf5425c0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1662.281 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 1658.797 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -110,37 +108,37 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1662.281 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 245e49039
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1658.797 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: e1fde78b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 1662.281 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 1658.797 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 245e49039
+Ending Power Optimization Task | Checksum: e1fde78b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1662.281 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1658.797 ; gain = 0.000
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 245e49039
+Ending Final Cleanup Task | Checksum: e1fde78b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1662.281 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1658.797 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1662.281 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 245e49039
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1658.797 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: e1fde78b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1662.281 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1658.797 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-25 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1662.281 ; gain = 558.441
+opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1658.797 ; gain = 554.867
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1662.281 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1658.797 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/FPGA_Harman/top_sensor/top_sensor.runs/impl_1/top_sensor_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file top_sensor_drc_opted.rpt -pb top_sensor_drc_opted.pb -rpx top_sensor_drc_opted.rpx
 Command: report_drc -file top_sensor_drc_opted.rpt -pb top_sensor_drc_opted.pb -rpx top_sensor_drc_opted.rpx
@@ -168,48 +166,48 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1708.418 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1a39cffed
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1704.945 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: d5ff23f6
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1708.418 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1704.945 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: c503b869
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1356aa91d
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.134 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.134 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: f9dc8288
+Phase 1.3 Build Placer Netlist Model | Checksum: 1e0fddf63
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.262 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.274 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: f9dc8288
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1e0fddf63
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.263 . Memory (MB): peak = 1708.418 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: f9dc8288
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.275 . Memory (MB): peak = 1704.945 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1e0fddf63
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.265 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.277 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 158b469ba
+Phase 2.1 Floorplanning | Checksum: 22479c9c8
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.357 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.363 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1090301cc
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 17b901a8b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.401 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.404 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 2.3 Global Placement Core
 
 Phase 2.3.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 1 LUTNM shape to break, 13 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 1 LUTNM shape to break, 26 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 1, two critical 0, total 1, new lutff created 0
-INFO: [Physopt 32-775] End 1 Pass. Optimized 5 nets or cells. Created 1 new cell, deleted 4 existing cells and moved 0 existing cell
+INFO: [Physopt 32-775] End 1 Pass. Optimized 11 nets or cells. Created 1 new cell, deleted 10 existing cells and moved 0 existing cell
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -225,7 +223,7 @@ INFO: [Physopt 32-846] No candidate cells for URAM register optimization found i
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -234,7 +232,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            1  |              4  |                     5  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            1  |             10  |                    11  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
@@ -242,69 +240,69 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            1  |              4  |                     5  |           0  |           8  |  00:00:00  |
+|  Total                                            |            1  |             10  |                    11  |           0  |           8  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.3.1 Physical Synthesis In Placer | Checksum: 10f6a4d3a
+Phase 2.3.1 Physical Synthesis In Placer | Checksum: 2028369df
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1708.418 ; gain = 0.000
-Phase 2.3 Global Placement Core | Checksum: ac3ece1b
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1704.945 ; gain = 0.000
+Phase 2.3 Global Placement Core | Checksum: 23face9a9
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1708.418 ; gain = 0.000
-Phase 2 Global Placement | Checksum: ac3ece1b
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1704.945 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 23face9a9
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 118b68e0c
+Phase 3.1 Commit Multi Column Macros | Checksum: 24a54cb84
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2893289f
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 14b54fd92
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 8e363784
+Phase 3.3 Area Swap Optimization | Checksum: 1334f7cdb
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 567bb2f5
+Phase 3.4 Pipeline Register Optimization | Checksum: eeda0c9f
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 3831709a
+Phase 3.5 Fast Optimization | Checksum: 160544927
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: a9f1b0d2
+Phase 3.6 Small Shape Detail Placement | Checksum: 124343001
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 11bbc626a
+Phase 3.7 Re-assign LUT pins | Checksum: 17f629513
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: c301e5fb
+Phase 3.8 Pipeline Register Optimization | Checksum: 1c2f7a1d7
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 1f21e00e5
+Phase 3.9 Fast Optimization | Checksum: 13cf86c52
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1708.418 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 1f21e00e5
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1704.945 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 13cf86c52
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -312,7 +310,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1eabf6c4b
+Post Placement Optimization Initialization | Checksum: dc1e6329
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -320,28 +318,28 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-13.651 | TNS=-53.437 |
-Phase 1 Physical Synthesis Initialization | Checksum: 19d2d8eb8
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-14.587 | TNS=-57.398 |
+Phase 1 Physical Synthesis Initialization | Checksum: da6c2660
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1704.945 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 1a8966f3d
+Ending Physical Synthesis Task | Checksum: 96e102de
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1708.418 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1eabf6c4b
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1704.945 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: dc1e6329
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1708.418 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-11.800. For the most accurate timing information please run report_timing.
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1704.945 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-11.929. For the most accurate timing information please run report_timing.
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1708.418 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 11b2a8c16
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1704.945 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1813d2906
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 11b2a8c16
+Phase 4.2 Post Placement Cleanup | Checksum: 1813d2906
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -360,107 +358,100 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 11b2a8c16
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1813d2906
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1708.418 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 11b2a8c16
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1704.945 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 1813d2906
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1708.418 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 19807bf4e
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1704.945 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 12b73dc7a
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1708.418 ; gain = 0.000
-Ending Placer Task | Checksum: a93a5dfd
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1704.945 ; gain = 0.000
+Ending Placer Task | Checksum: f0d71f8f
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1704.945 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-67 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+66 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1708.418 ; gain = 0.016
+place_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1704.945 ; gain = 0.020
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1704.945 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/FPGA_Harman/top_sensor/top_sensor.runs/impl_1/top_sensor_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file top_sensor_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1708.418 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1704.945 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file top_sensor_utilization_placed.rpt -pb top_sensor_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_sensor_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1708.418 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1704.945 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.800 | TNS=-46.770 |
-Phase 1 Physical Synthesis Initialization | Checksum: 2461babb2
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.929 | TNS=-47.338 |
+Phase 1 Physical Synthesis Initialization | Checksum: 3b1ef902
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1708.418 ; gain = 0.000
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.800 | TNS=-46.770 |
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 1704.945 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.929 | TNS=-47.338 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: 2461babb2
+Phase 2 DSP Register Optimization | Checksum: 3b1ef902
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.800 | TNS=-46.770 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.929 | TNS=-47.338 |
 INFO: [Physopt 32-702] Processed net uuart/uclock_Tx/data_reg_reg[7]_0[1]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-81] Processed net usensor/data_reg[1]. Replicated 1 times.
 INFO: [Physopt 32-735] Processed net usensor/data_reg[1]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.706 | TNS=-46.394 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.903 | TNS=-47.234 |
 INFO: [Physopt 32-81] Processed net usensor/data_reg[6]. Replicated 1 times.
 INFO: [Physopt 32-735] Processed net usensor/data_reg[6]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.689 | TNS=-46.326 |
-INFO: [Physopt 32-81] Processed net usensor/data_reg[8]. Replicated 1 times.
-INFO: [Physopt 32-735] Processed net usensor/data_reg[8]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.676 | TNS=-46.274 |
-INFO: [Physopt 32-81] Processed net usensor/data_reg[7]. Replicated 1 times.
-INFO: [Physopt 32-735] Processed net usensor/data_reg[7]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.654 | TNS=-46.186 |
-INFO: [Physopt 32-81] Processed net usensor/data_reg[3]. Replicated 1 times.
-INFO: [Physopt 32-735] Processed net usensor/data_reg[3]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.641 | TNS=-46.134 |
-INFO: [Physopt 32-663] Processed net usensor/data_reg[8].  Re-placed instance usensor/data_reg_reg[8]
-INFO: [Physopt 32-735] Processed net usensor/data_reg[8]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.629 | TNS=-46.086 |
-INFO: [Physopt 32-81] Processed net usensor/data_reg[5]. Replicated 1 times.
-INFO: [Physopt 32-735] Processed net usensor/data_reg[5]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.622 | TNS=-46.058 |
-INFO: [Physopt 32-572] Net usensor/data_reg[1]_repN was not replicated.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.834 | TNS=-46.958 |
+INFO: [Physopt 32-572] Net usensor/data_reg[8] was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/data_reg[1]_repN.  Did not re-place instance usensor/data_reg_reg[1]_replica
-INFO: [Physopt 32-572] Net usensor/data_reg[1]_repN was not replicated.
+INFO: [Physopt 32-662] Processed net usensor/data_reg[8].  Did not re-place instance usensor/data_reg_reg[8]
+INFO: [Physopt 32-572] Net usensor/data_reg[8] was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net usensor/data_reg[1]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/data_reg[8]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/uclock_Tx/data_reg[1]_i_5_n_0.  Did not re-place instance uuart/uclock_Tx/data_reg[1]_i_5
 INFO: [Physopt 32-710] Processed net uuart/uclock_Tx/data_reg[1]_i_1__0_n_0. Critical path length was reduced through logic transformation on cell uuart/uclock_Tx/data_reg[1]_i_1__0_comp.
 INFO: [Physopt 32-735] Processed net uuart/uclock_Tx/data_reg[1]_i_5_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.505 | TNS=-45.909 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.823 | TNS=-46.864 |
 INFO: [Physopt 32-702] Processed net uuart/uclock_Tx/data_reg_reg[7]_0[3]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/u_bit/FSM_onehot_state_reg[6].  Did not re-place instance uuart/u_bit/data_reg[3]_i_2
-INFO: [Physopt 32-735] Processed net uuart/u_bit/FSM_onehot_state_reg[6]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.490 | TNS=-45.894 |
-INFO: [Physopt 32-662] Processed net uuart/u_bit/FSM_onehot_state_reg[6].  Did not re-place instance uuart/u_bit/data_reg[3]_i_2
 INFO: [Physopt 32-702] Processed net uuart/u_bit/FSM_onehot_state_reg[6]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_8_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_8
-INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_5_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_5
+INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_5_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[2]_i_8_n_0.  Did not re-place instance uuart/u_bit/data_reg[2]_i_8
 INFO: [Physopt 32-572] Net uuart/u_bit/data_reg[2]_i_8_n_0 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[2]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net uuart/u_bit/data_reg[2]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.813 | TNS=-46.747 |
+INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_9_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_9
+INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[2]_i_6_n_0.  Did not re-place instance uuart/u_bit/data_reg[2]_i_6
+INFO: [Physopt 32-710] Processed net uuart/u_bit/data_reg[3]_i_9_n_0. Critical path length was reduced through logic transformation on cell uuart/u_bit/data_reg[3]_i_9_comp.
+INFO: [Physopt 32-735] Processed net uuart/u_bit/data_reg[2]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.737 | TNS=-46.677 |
+INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_19_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_19
+INFO: [Physopt 32-572] Net uuart/u_bit/data_reg[3]_i_19_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_19_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[2]_i_15_n_0.  Did not re-place instance uuart/u_bit/data_reg[2]_i_15
 INFO: [Physopt 32-572] Net uuart/u_bit/data_reg[2]_i_15_n_0 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
@@ -472,22 +463,16 @@ INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_32_n_0. Optimizat
 INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_20_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_20
 INFO: [Physopt 32-710] Processed net uuart/u_bit/data_reg[3]_i_32_n_0. Critical path length was reduced through logic transformation on cell uuart/u_bit/data_reg[3]_i_32_comp.
 INFO: [Physopt 32-735] Processed net uuart/u_bit/data_reg[3]_i_20_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.443 | TNS=-45.527 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.554 | TNS=-46.130 |
 INFO: [Physopt 32-702] Processed net uuart/uclock_Tx/data_reg_reg[7]_0[0]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[0]_i_2_n_0.  Did not re-place instance uuart/u_bit/data_reg[0]_i_2
-INFO: [Physopt 32-134] Processed net uuart/u_bit/data_reg[0]_i_2_n_0. Rewiring did not optimize the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[0]_i_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[0]_i_5_n_0.  Did not re-place instance uuart/u_bit/data_reg[0]_i_5
-INFO: [Physopt 32-710] Processed net uuart/u_bit/data_reg[0]_i_2_n_0. Critical path length was reduced through logic transformation on cell uuart/u_bit/data_reg[0]_i_2_comp.
-INFO: [Physopt 32-735] Processed net uuart/u_bit/data_reg[0]_i_5_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.388 | TNS=-45.340 |
-INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_7_0.  Did not re-place instance uuart/u_bit/data_reg[1]_i_7
-INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_7_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[2]_i_9_n_0.  Did not re-place instance uuart/u_bit/data_reg[2]_i_9
-INFO: [Physopt 32-572] Net uuart/u_bit/data_reg[2]_i_9_n_0 was not replicated.
+INFO: [Physopt 32-710] Processed net uuart/u_bit/D[0]. Critical path length was reduced through logic transformation on cell uuart/u_bit/data_reg[0]_i_1__0_comp.
+INFO: [Physopt 32-735] Processed net uuart/u_bit/data_reg[0]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.553 | TNS=-46.128 |
+INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[2]_i_8_n_0.  Did not re-place instance uuart/u_bit/data_reg[2]_i_8
+INFO: [Physopt 32-572] Net uuart/u_bit/data_reg[2]_i_8_n_0 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-735] Processed net uuart/u_bit/data_reg[2]_i_9_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.369 | TNS=-45.304 |
+INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[2]_i_8_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/u_bit/o_data1002__252[4].  Did not re-place instance uuart/u_bit/data_reg[3]_i_18
 INFO: [Physopt 32-572] Net uuart/u_bit/o_data1002__252[4] was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
@@ -495,15 +480,7 @@ INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__252[4]. Optimizatio
 INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_20_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_20
 INFO: [Physopt 32-710] Processed net uuart/u_bit/o_data1002__252[4]. Critical path length was reduced through logic transformation on cell uuart/u_bit/data_reg[3]_i_18_comp.
 INFO: [Physopt 32-735] Processed net uuart/u_bit/data_reg[3]_i_20_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.210 | TNS=-44.782 |
-INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[2]_i_9_n_0.  Did not re-place instance uuart/u_bit/data_reg[2]_i_9
-INFO: [Physopt 32-572] Net uuart/u_bit/data_reg[2]_i_9_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[2]_i_9_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net uuart/u_bit/o_data1002__252[5].  Did not re-place instance uuart/u_bit/data_reg[2]_i_17
-INFO: [Physopt 32-572] Net uuart/u_bit/o_data1002__252[5] was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__252[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.438 | TNS=-45.479 |
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__121_carry__2_n_2. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__121_carry__1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_34[1].  Did not re-place instance usensor/o_data1002__121_carry__1_i_1
@@ -511,44 +488,36 @@ INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_34[1]. Optimizatio
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry__0_i_8_0[1]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-735] Processed net uuart/u_bit/o_data1002__90_carry_i_6_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.151 | TNS=-44.546 |
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/O[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.403 | TNS=-45.339 |
+INFO: [Physopt 32-662] Processed net uuart/u_bit/o_data1002__90_carry_i_1_n_0.  Did not re-place instance uuart/u_bit/o_data1002__90_carry_i_1
+INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net uuart/u_bit/O[0]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__37_carry__1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry__0_i_1_3[3]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.043 | TNS=-44.114 |
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_18[0].  Did not re-place instance usensor/o_data1002__37_carry__1_i_4
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_18[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net usensor/o_data1002__37_carry__1_i_11_n_0.  Did not re-place instance usensor/o_data1002__37_carry__1_i_11
+INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[15]_18[0]. Critical path length was reduced through logic transformation on cell usensor/o_data1002__37_carry__1_i_4_comp.
+INFO: [Physopt 32-735] Processed net usensor/o_data1002__37_carry__1_i_11_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.395 | TNS=-45.307 |
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_18[1].  Did not re-place instance usensor/o_data1002__37_carry__1_i_3
+INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_18[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_18[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net usensor/o_data1002__37_carry__1_i_11_n_0.  Did not re-place instance usensor/o_data1002__37_carry__1_i_11
+INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[15]_18[1]. Critical path length was reduced through logic transformation on cell usensor/o_data1002__37_carry__1_i_3_comp.
+INFO: [Physopt 32-735] Processed net usensor/o_data1002__37_carry__1_i_11_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.339 | TNS=-45.083 |
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry__0_i_1_3[3]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_18[3].  Did not re-place instance usensor/o_data1002__37_carry__1_i_1
 INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_18[3] was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_18[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/o_data1002__37_carry__1_i_9_n_0.  Did not re-place instance usensor/o_data1002__37_carry__1_i_9
-INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[15]_18[3]. Critical path length was reduced through logic transformation on cell usensor/o_data1002__37_carry__1_i_1_comp.
-INFO: [Physopt 32-735] Processed net usensor/o_data1002__37_carry__1_i_9_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.040 | TNS=-44.102 |
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry__0_i_1_3[2]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_18[2].  Did not re-place instance usensor/o_data1002__37_carry__1_i_2
-INFO: [Physopt 32-710] Processed net usensor/digit_10000_carry__0_i_1_3[2]. Critical path length was reduced through logic transformation on cell usensor/o_data1002__37_carry__1_i_6_comp.
-INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[15]_18[2]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.027 | TNS=-44.050 |
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry__0_i_1_3[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/o_data1002__37_carry__1_i_10_n_0.  Did not re-place instance usensor/o_data1002__37_carry__1_i_10
-INFO: [Physopt 32-710] Processed net usensor/digit_10000_carry__0_i_1_3[1]. Critical path length was reduced through logic transformation on cell usensor/o_data1002__37_carry__1_i_7_comp.
-INFO: [Physopt 32-735] Processed net usensor/o_data1002__37_carry__1_i_10_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.979 | TNS=-43.858 |
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_18[2].  Did not re-place instance usensor/o_data1002__37_carry__1_i_2
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_18[2]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/o_data1002__37_carry__1_i_10_n_0.  Did not re-place instance usensor/o_data1002__37_carry__1_i_10
-INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[15]_18[2]. Critical path length was reduced through logic transformation on cell usensor/o_data1002__37_carry__1_i_2_comp_2.
-INFO: [Physopt 32-735] Processed net usensor/o_data1002__37_carry__1_i_10_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.934 | TNS=-43.678 |
-INFO: [Physopt 32-735] Processed net uuart/u_bit/o_data1002__121_carry__2_i_1_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.929 | TNS=-43.658 |
-INFO: [Physopt 32-662] Processed net usensor/o_data1002__37_carry__1_i_9_n_0.  Did not re-place instance usensor/o_data1002__37_carry__1_i_9
-INFO: [Physopt 32-702] Processed net usensor/o_data1002__37_carry__1_i_9_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__1_i_5[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[12]_13[1]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.904 | TNS=-43.558 |
+INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[15]_18[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.266 | TNS=-44.791 |
+INFO: [Physopt 32-662] Processed net usensor/o_data1002__37_carry__1_i_12_n_0.  Did not re-place instance usensor/o_data1002__37_carry__1_i_12
+INFO: [Physopt 32-710] Processed net usensor/digit_10000_carry__0_i_1_3[3]. Critical path length was reduced through logic transformation on cell usensor/o_data1002__37_carry__1_i_5_comp.
+INFO: [Physopt 32-735] Processed net usensor/o_data1002__37_carry__1_i_12_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.251 | TNS=-44.731 |
+INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__1_i_5[1]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__0_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_23[3]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-572] Net usensor/data_reg_reg[12]_4[1] was not replicated.
@@ -556,171 +525,195 @@ Resolution: phys_opt_design can be forced to replicate a net driver using the op
 INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_4[1].  Did not re-place instance usensor/digit_10000_carry_i_2
 INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[15]_23[3]. Critical path length was reduced through logic transformation on cell usensor/o_data1002_carry__0_i_3_comp.
 INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[12]_4[1]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.884 | TNS=-43.478 |
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_23[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_12[1] was not replicated.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.246 | TNS=-44.711 |
+INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__37_carry__3_i_8[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__37_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_6[0].  Did not re-place instance usensor/o_data1002__37_carry__2_i_4
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_6[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net usensor/o_data1002__37_carry__1_i_12_n_0.  Did not re-place instance usensor/o_data1002__37_carry__1_i_12
+INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[12]_6[0]. Critical path length was reduced through logic transformation on cell usensor/o_data1002__37_carry__2_i_4_comp.
+INFO: [Physopt 32-735] Processed net usensor/o_data1002__37_carry__1_i_12_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.226 | TNS=-44.631 |
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_18[3].  Did not re-place instance usensor/o_data1002__37_carry__1_i_1
+INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_18[3] was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_12[1].  Did not re-place instance usensor/digit_1000__37_carry__0_i_3
-INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[15]_23[0]. Critical path length was reduced through logic transformation on cell usensor/o_data1002_carry__0_i_6_comp.
-INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[15]_12[1]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.832 | TNS=-43.270 |
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_18[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__2_i_4[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_13[1]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-572] Net usensor/data_reg_reg[12]_2 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
 INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_2.  Did not re-place instance usensor/digit_10000_carry_i_9
 INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[12]_13[1]. Critical path length was reduced through logic transformation on cell usensor/o_data1002_carry__1_i_4_comp.
 INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[12]_2. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.819 | TNS=-43.218 |
-INFO: [Physopt 32-572] Net usensor/data_reg_reg[12]_4[0] was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_4[0].  Did not re-place instance usensor/digit_10000_carry_i_3
-INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[12]_13[1]. Critical path length was reduced through logic transformation on cell usensor/o_data1002_carry__1_i_4_comp_1.
-INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[12]_4[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.803 | TNS=-43.154 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.223 | TNS=-44.619 |
 INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_13[0]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-572] Net usensor/data_reg_reg[12]_2 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
 INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_2.  Did not re-place instance usensor/digit_10000_carry_i_9
 INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[12]_13[0]. Critical path length was reduced through logic transformation on cell usensor/o_data1002_carry__1_i_5_comp.
 INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[12]_2. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.763 | TNS=-42.994 |
-INFO: [Physopt 32-662] Processed net uuart/u_bit/o_data1002__90_carry_i_1_n_0.  Did not re-place instance uuart/u_bit/o_data1002__90_carry_i_1
-INFO: [Physopt 32-735] Processed net uuart/u_bit/o_data1002__90_carry_i_1_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.755 | TNS=-42.962 |
-INFO: [Physopt 32-663] Processed net usensor/o_data1002__37_carry__1_i_12_n_0.  Re-placed instance usensor/o_data1002__37_carry__1_i_12
-INFO: [Physopt 32-735] Processed net usensor/o_data1002__37_carry__1_i_12_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.691 | TNS=-42.706 |
-INFO: [Physopt 32-662] Processed net usensor/o_data1002__37_carry__1_i_12_n_0.  Did not re-place instance usensor/o_data1002__37_carry__1_i_12
-INFO: [Physopt 32-710] Processed net usensor/digit_10000_carry__0_i_1_3[3]. Critical path length was reduced through logic transformation on cell usensor/o_data1002__37_carry__1_i_5_comp.
-INFO: [Physopt 32-735] Processed net usensor/o_data1002__37_carry__1_i_12_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.687 | TNS=-42.690 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.210 | TNS=-44.567 |
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_13[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net usensor/data_reg_reg[12]_2 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_2.  Did not re-place instance usensor/digit_10000_carry_i_9
+INFO: [Physopt 32-134] Processed net usensor/data_reg_reg[12]_2. Rewiring did not optimize the net.
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_2. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-572] Net usensor/digit_10000_carry_i_11_n_0 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
 INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_11_n_0.  Did not re-place instance usensor/digit_10000_carry_i_11
-INFO: [Physopt 32-134] Processed net usensor/digit_10000_carry_i_11_n_0. Rewiring did not optimize the net.
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[12]_2. Critical path length was reduced through logic transformation on cell usensor/digit_10000_carry_i_9_comp_2.
+INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_11_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.098 | TNS=-44.119 |
+INFO: [Physopt 32-572] Net usensor/data_reg_reg[12]_4[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_4[0].  Did not re-place instance usensor/digit_10000_carry_i_3
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_4[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net usensor/digit_10000_carry_i_11_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_11_n_0.  Did not re-place instance usensor/digit_10000_carry_i_11
+INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[12]_4[0]. Critical path length was reduced through logic transformation on cell usensor/digit_10000_carry_i_3_comp.
+INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_11_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.094 | TNS=-44.103 |
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_13[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net usensor/data_reg_reg[12]_4[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_4[1].  Did not re-place instance usensor/digit_10000_carry_i_2
+INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[12]_13[2]. Critical path length was reduced through logic transformation on cell usensor/o_data1002_carry__1_i_3_comp.
+INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[12]_4[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.047 | TNS=-43.915 |
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_23[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_12[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_12[1].  Did not re-place instance usensor/digit_1000__37_carry__0_i_3
+INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[15]_23[0]. Critical path length was reduced through logic transformation on cell usensor/o_data1002_carry__0_i_6_comp.
+INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[15]_12[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-11.024 | TNS=-43.823 |
+INFO: [Physopt 32-572] Net usensor/data_reg_reg[12]_4[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_4[1].  Did not re-place instance usensor/digit_10000_carry_i_2
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_4[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net usensor/digit_10000_carry_i_11_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_11_n_0.  Did not re-place instance usensor/digit_10000_carry_i_11
+INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[12]_4[1]. Critical path length was reduced through logic transformation on cell usensor/digit_10000_carry_i_2_comp_3.
+INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_11_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.976 | TNS=-43.631 |
+INFO: [Physopt 32-572] Net usensor/data_reg_reg[12]_5[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_5[0].  Did not re-place instance usensor/digit_1000_carry__1_i_2
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_5[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net usensor/digit_10000_carry_i_11_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_11_n_0.  Did not re-place instance usensor/digit_10000_carry_i_11
+INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[12]_5[0]. Critical path length was reduced through logic transformation on cell usensor/digit_1000_carry__1_i_2_comp.
+INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_11_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.914 | TNS=-43.383 |
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_23[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net usensor/data_reg_reg[15]_7[1]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[15]_7[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.903 | TNS=-43.339 |
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_14_n_1. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_29_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_62_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net digit_10000_carry_i_27_n_7. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net digit_10000_carry_i_47_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net digit_10000_carry_i_87_n_0.  Did not re-place instance digit_10000_carry_i_87
-INFO: [Physopt 32-702] Processed net digit_10000_carry_i_87_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_64_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.853 | TNS=-43.139 |
+INFO: [Physopt 32-81] Processed net usensor/data_reg[7]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net usensor/data_reg[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.830 | TNS=-43.047 |
+INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_63_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.821 | TNS=-43.011 |
+INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_35_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.814 | TNS=-42.983 |
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_64_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net digit_10000_carry_i_47_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net digit_10000_carry_i_84_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net digit_10000_carry_i_120_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.764 | TNS=-42.783 |
+INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_34_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.762 | TNS=-42.775 |
+INFO: [Physopt 32-735] Processed net digit_10000_carry_i_91_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.760 | TNS=-42.767 |
+INFO: [Physopt 32-702] Processed net digit_10000_carry_i_120_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/O[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_36_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_69_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.688 | TNS=-42.479 |
+INFO: [Physopt 32-702] Processed net digit_10000_carry_i_91_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[9]_0[3]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_15_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_40_n_0.  Did not re-place instance usensor/digit_10000_carry_i_40
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_40_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_72_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_39_n_0.  Did not re-place instance usensor/digit_10000_carry_i_39
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_39_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_72_n_4. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_106_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net usensor/digit_10000_carry_i_134_n_0.  Re-placed instance usensor/digit_10000_carry_i_134
-INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_134_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.682 | TNS=-42.670 |
-INFO: [Physopt 32-81] Processed net usensor/data_reg[4]. Replicated 1 times.
-INFO: [Physopt 32-735] Processed net usensor/data_reg[4]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.680 | TNS=-42.662 |
-INFO: [Physopt 32-81] Processed net usensor/data_reg[12]. Replicated 1 times.
-INFO: [Physopt 32-735] Processed net usensor/data_reg[12]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.679 | TNS=-42.658 |
-INFO: [Physopt 32-572] Net usensor/data_reg[7]_repN was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/data_reg[7]_repN.  Did not re-place instance usensor/data_reg_reg[7]_replica
-INFO: [Physopt 32-572] Net usensor/data_reg[7]_repN was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net usensor/data_reg[7]_repN. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net usensor/digit_10000_carry_i_133_n_0.  Re-placed instance usensor/digit_10000_carry_i_133
-INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_133_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.676 | TNS=-42.646 |
-INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_37_n_0.  Did not re-place instance usensor/digit_10000_carry_i_37
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_37_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_46_n_6. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_72_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_109_n_0.  Did not re-place instance usensor/digit_10000_carry_i_109
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_109_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-735] Processed net uuart/uclock_Tx/data_reg[1]_i_1__0_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.671 | TNS=-42.603 |
-INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[2]_i_6_n_0.  Did not re-place instance uuart/u_bit/data_reg[2]_i_6
-INFO: [Physopt 32-572] Net uuart/u_bit/data_reg[2]_i_6_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[2]_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_19_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_19
-INFO: [Physopt 32-572] Net uuart/u_bit/data_reg[3]_i_19_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-735] Processed net uuart/u_bit/data_reg[3]_i_19_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.663 | TNS=-42.519 |
+INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_132_n_0.  Did not re-place instance usensor/digit_10000_carry_i_132
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_132_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net uuart/uclock_Tx/data_reg[3]_i_1__0_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net clk_IBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net clk. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net uuart/uclock_Tx/data_reg_reg[7]_0[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net usensor/data_reg[7]_repN.  Re-placed instance usensor/data_reg_reg[7]_replica
-INFO: [Physopt 32-735] Processed net usensor/data_reg[7]_repN. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.652 | TNS=-42.475 |
+INFO: [Physopt 32-663] Processed net usensor/data_reg[8].  Re-placed instance usensor/data_reg_reg[8]
+INFO: [Physopt 32-735] Processed net usensor/data_reg[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.686 | TNS=-42.471 |
+INFO: [Physopt 32-663] Processed net usensor/data_reg[3].  Re-placed instance usensor/data_reg_reg[3]
+INFO: [Physopt 32-735] Processed net usensor/data_reg[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.658 | TNS=-42.359 |
+INFO: [Physopt 32-663] Processed net usensor/data_reg[5].  Re-placed instance usensor/data_reg_reg[5]
+INFO: [Physopt 32-735] Processed net usensor/data_reg[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.630 | TNS=-42.247 |
 INFO: [Physopt 32-662] Processed net usensor/data_reg[1]_repN.  Did not re-place instance usensor/data_reg_reg[1]_replica
 INFO: [Physopt 32-702] Processed net usensor/data_reg[1]_repN. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/u_bit/FSM_onehot_state_reg[6].  Did not re-place instance uuart/u_bit/data_reg[3]_i_2
 INFO: [Physopt 32-702] Processed net uuart/u_bit/FSM_onehot_state_reg[6]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_8_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_8
-INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_8_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[2]_i_8_n_0.  Did not re-place instance uuart/u_bit/data_reg[2]_i_8
-INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[2]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_5_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_5
+INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_19_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_19
+INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_19_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[2]_i_15_n_0.  Did not re-place instance uuart/u_bit/data_reg[2]_i_15
 INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[2]_i_15_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net uuart/u_bit/data_reg[3]_i_32_n_0.  Re-placed instance uuart/u_bit/data_reg[3]_i_32_comp
-INFO: [Physopt 32-735] Processed net uuart/u_bit/data_reg[3]_i_32_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.636 | TNS=-42.414 |
 INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_32_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_32_comp
 INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_32_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__121_carry__2_n_2. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_34[1].  Did not re-place instance usensor/o_data1002__121_carry__1_i_1
 INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_34[1]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry__0_i_8_0[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/O[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry__0_i_1_3[2]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.613 | TNS=-42.322 |
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry__0_i_8_3[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net usensor/o_data1002__37_carry__2_i_9_n_0.  Re-placed instance usensor/o_data1002__37_carry__2_i_9
-INFO: [Physopt 32-735] Processed net usensor/o_data1002__37_carry__2_i_9_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.596 | TNS=-42.254 |
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__121_carry__2_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry__1_n_6. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net uuart/u_bit/o_data1002__90_carry__0_i_3_n_0.  Did not re-place instance uuart/u_bit/o_data1002__90_carry__0_i_3
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry__0_i_3_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__37_carry__4_n_6. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net usensor/data_reg_reg[15]_35[0].  Re-placed instance usensor/o_data1002__37_carry__3_i_4
-INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[15]_35[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.557 | TNS=-42.098 |
 INFO: [Physopt 32-662] Processed net uuart/u_bit/o_data1002__90_carry_i_1_n_0.  Did not re-place instance uuart/u_bit/o_data1002__90_carry_i_1
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__37_carry__3_n_4. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_6[1].  Did not re-place instance usensor/o_data1002__37_carry__2_i_3
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_6[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__2_i_4[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_13[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_2.  Did not re-place instance usensor/digit_10000_carry_i_9
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_2. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_11_n_0.  Did not re-place instance usensor/digit_10000_carry_i_11
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net uuart/u_bit/O[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry__0_i_1_3[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_18[3].  Did not re-place instance usensor/o_data1002__37_carry__1_i_1
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_18[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__2_i_4[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[12]_13[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.592 | TNS=-42.095 |
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_18[1].  Did not re-place instance usensor/o_data1002__37_carry__1_i_3_comp
+INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[15]_18[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.541 | TNS=-41.891 |
+INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[15]_23[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.529 | TNS=-41.843 |
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_23[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_7[1]_repN.  Did not re-place instance usensor/digit_1000_carry__0_i_3_replica
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_7[1]_repN. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_14_n_1. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_62_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net digit_10000_carry_i_27_n_7. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net digit_10000_carry_i_87_n_0.  Did not re-place instance digit_10000_carry_i_87
-INFO: [Physopt 32-702] Processed net digit_10000_carry_i_87_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_64_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net digit_10000_carry_i_47_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net digit_10000_carry_i_91_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[9]_0[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_40_n_0.  Did not re-place instance usensor/digit_10000_carry_i_40
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_40_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_72_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_39_n_0.  Did not re-place instance usensor/digit_10000_carry_i_39
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_39_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_72_n_4. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_134_n_0.  Did not re-place instance usensor/digit_10000_carry_i_134
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_134_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net uuart/uclock_Tx/data_reg[3]_i_1__0_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net clk_IBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net clk. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.557 | TNS=-42.098 |
-Phase 3 Critical Path Optimization | Checksum: 2461babb2
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.529 | TNS=-41.843 |
+Phase 3 Critical Path Optimization | Checksum: 3b1ef902
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1704.945 ; gain = 0.000
 
 Phase 4 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.557 | TNS=-42.098 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.529 | TNS=-41.843 |
 INFO: [Physopt 32-702] Processed net uuart/uclock_Tx/data_reg_reg[7]_0[3]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-572] Net usensor/data_reg[1]_repN was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
@@ -730,12 +723,12 @@ Resolution: phys_opt_design can be forced to replicate a net driver using the op
 INFO: [Physopt 32-702] Processed net usensor/data_reg[1]_repN. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/u_bit/FSM_onehot_state_reg[6].  Did not re-place instance uuart/u_bit/data_reg[3]_i_2
 INFO: [Physopt 32-702] Processed net uuart/u_bit/FSM_onehot_state_reg[6]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_8_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_8
-INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_8_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[2]_i_8_n_0.  Did not re-place instance uuart/u_bit/data_reg[2]_i_8
-INFO: [Physopt 32-572] Net uuart/u_bit/data_reg[2]_i_8_n_0 was not replicated.
+INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_5_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_5
+INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_19_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_19
+INFO: [Physopt 32-572] Net uuart/u_bit/data_reg[3]_i_19_n_0 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[2]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_19_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[2]_i_15_n_0.  Did not re-place instance uuart/u_bit/data_reg[2]_i_15
 INFO: [Physopt 32-572] Net uuart/u_bit/data_reg[2]_i_15_n_0 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
@@ -752,102 +745,48 @@ INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry__0_i_8_0[1
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/u_bit/o_data1002__90_carry_i_1_n_0.  Did not re-place instance uuart/u_bit/o_data1002__90_carry_i_1
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__37_carry__3_n_4. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__37_carry__2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_6[1].  Did not re-place instance usensor/o_data1002__37_carry__2_i_3
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_6[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__2_i_4[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_13[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-572] Net usensor/data_reg_reg[12]_2 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_2.  Did not re-place instance usensor/digit_10000_carry_i_9
-INFO: [Physopt 32-134] Processed net usensor/data_reg_reg[12]_2. Rewiring did not optimize the net.
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_2. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-572] Net usensor/digit_10000_carry_i_11_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_11_n_0.  Did not re-place instance usensor/digit_10000_carry_i_11
-INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[12]_2. Critical path length was reduced through logic transformation on cell usensor/digit_10000_carry_i_9_comp_2.
-INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_11_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.550 | TNS=-42.070 |
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/O[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net uuart/u_bit/O[0]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__37_carry__1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry__0_i_1_3[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_18[1].  Did not re-place instance usensor/o_data1002__37_carry__1_i_3
-INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_18[1] was not replicated.
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry__0_i_1_3[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_18[3].  Did not re-place instance usensor/o_data1002__37_carry__1_i_1
+INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_18[3] was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_18[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/o_data1002__37_carry__1_i_11_n_0.  Did not re-place instance usensor/o_data1002__37_carry__1_i_11
-INFO: [Physopt 32-134] Processed net usensor/o_data1002__37_carry__1_i_11_n_0. Rewiring did not optimize the net.
-INFO: [Physopt 32-572] Net usensor/o_data1002__37_carry__1_i_11_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net usensor/o_data1002__37_carry__1_i_11_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__1_i_5[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_18[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__2_i_4[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__0_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[15]_23[3]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.535 | TNS=-42.010 |
 INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_23[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-81] Processed net usensor/data_reg_reg[15]_7[1]. Replicated 1 times.
-INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[15]_7[1]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.519 | TNS=-41.946 |
-INFO: [Physopt 32-572] Net usensor/data_reg_reg[12]_5[0] was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_5[0].  Did not re-place instance usensor/digit_1000_carry__1_i_2
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_5[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-572] Net usensor/digit_10000_carry_i_11_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_11_n_0.  Did not re-place instance usensor/digit_10000_carry_i_11
-INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[12]_5[0]. Critical path length was reduced through logic transformation on cell usensor/digit_1000_carry__1_i_2_comp.
-INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_11_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.502 | TNS=-41.878 |
-INFO: [Physopt 32-572] Net usensor/data_reg_reg[12]_4[0] was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_4[0].  Did not re-place instance usensor/digit_10000_carry_i_3
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_4[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-572] Net usensor/digit_10000_carry_i_11_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_11_n_0.  Did not re-place instance usensor/digit_10000_carry_i_11
-INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[12]_4[0]. Critical path length was reduced through logic transformation on cell usensor/digit_10000_carry_i_3_comp_1.
-INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_11_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.478 | TNS=-41.782 |
-INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_7[1]_repN was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_7[1]_repN.  Did not re-place instance usensor/digit_1000_carry__0_i_3_replica
-INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[15]_23[1]. Critical path length was reduced through logic transformation on cell usensor/o_data1002_carry__0_i_5_comp.
+INFO: [Physopt 32-81] Processed net usensor/data_reg_reg[15]_7[1]_repN. Replicated 1 times.
 INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[15]_7[1]_repN. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.435 | TNS=-41.610 |
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[12]_13[2]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-572] Net usensor/data_reg_reg[12]_4[1] was not replicated.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.525 | TNS=-41.827 |
+INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_7[1]_repN_1 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[12]_4[1].  Did not re-place instance usensor/digit_10000_carry_i_2
-INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[12]_13[2]. Critical path length was reduced through logic transformation on cell usensor/o_data1002_carry__1_i_3_comp.
-INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[12]_4[1]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.415 | TNS=-41.530 |
-INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_7[0] was not replicated.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_7[1]_repN_1.  Did not re-place instance usensor/digit_1000_carry__0_i_3_replica_1
+INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[15]_23[1]. Critical path length was reduced through logic transformation on cell usensor/o_data1002_carry__0_i_5_comp.
+INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[15]_7[1]_repN_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.522 | TNS=-41.815 |
+INFO: [Physopt 32-572] Net usensor/digit_10000_carry_i_11_n_0 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_7[0].  Did not re-place instance usensor/digit_1000_carry__0_i_4
-INFO: [Physopt 32-81] Processed net usensor/data_reg_reg[15]_7[0]. Replicated 1 times.
-INFO: [Physopt 32-735] Processed net usensor/data_reg_reg[15]_7[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.408 | TNS=-41.502 |
-INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_7[0] was not replicated.
+INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_11_n_0.  Did not re-place instance usensor/digit_10000_carry_i_11
+INFO: [Physopt 32-710] Processed net usensor/data_reg_reg[15]_23[1]. Critical path length was reduced through logic transformation on cell usensor/o_data1002_carry__0_i_5_comp_1.
+INFO: [Physopt 32-735] Processed net usensor/digit_10000_carry_i_11_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.419 | TNS=-41.403 |
+INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_7[1]_repN_1 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_7[0].  Did not re-place instance usensor/digit_1000_carry__0_i_4
-INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_7[0] was not replicated.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_7[1]_repN_1.  Did not re-place instance usensor/digit_1000_carry__0_i_3_replica_1
+INFO: [Physopt 32-572] Net usensor/data_reg_reg[15]_7[1]_repN_1 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_7[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_7[1]_repN_1. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_14_n_1. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_29_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_62_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net digit_10000_carry_i_27_n_7. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net digit_10000_carry_i_47_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net digit_10000_carry_i_87_n_0.  Did not re-place instance digit_10000_carry_i_87
-INFO: [Physopt 32-702] Processed net digit_10000_carry_i_87_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_64_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net digit_10000_carry_i_47_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net digit_10000_carry_i_91_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[9]_0[3]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_15_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_40_n_0.  Did not re-place instance usensor/digit_10000_carry_i_40
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_40_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_72_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_39_n_0.  Did not re-place instance usensor/digit_10000_carry_i_39
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_39_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_72_n_4. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_106_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_134_n_0.  Did not re-place instance usensor/digit_10000_carry_i_134
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_134_n_0. Optimizations did not improve timing on the net.
@@ -859,10 +798,10 @@ INFO: [Physopt 32-662] Processed net usensor/data_reg[1]_repN.  Did not re-place
 INFO: [Physopt 32-702] Processed net usensor/data_reg[1]_repN. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/u_bit/FSM_onehot_state_reg[6].  Did not re-place instance uuart/u_bit/data_reg[3]_i_2
 INFO: [Physopt 32-702] Processed net uuart/u_bit/FSM_onehot_state_reg[6]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_8_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_8
-INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_8_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[2]_i_8_n_0.  Did not re-place instance uuart/u_bit/data_reg[2]_i_8
-INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[2]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_5_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_5
+INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_19_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_19
+INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[3]_i_19_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[2]_i_15_n_0.  Did not re-place instance uuart/u_bit/data_reg[2]_i_15
 INFO: [Physopt 32-702] Processed net uuart/u_bit/data_reg[2]_i_15_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net uuart/u_bit/data_reg[3]_i_32_n_0.  Did not re-place instance uuart/u_bit/data_reg[3]_i_32_comp
@@ -871,36 +810,34 @@ INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__121_carry__2_n_2. O
 INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_34[1].  Did not re-place instance usensor/o_data1002__121_carry__1_i_1
 INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_34[1]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry__0_i_8_0[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/O[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry__0_i_1_3[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_18[1].  Did not re-place instance usensor/o_data1002__37_carry__1_i_3
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_18[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/o_data1002__37_carry__1_i_11_n_0.  Did not re-place instance usensor/o_data1002__37_carry__1_i_11
-INFO: [Physopt 32-702] Processed net usensor/o_data1002__37_carry__1_i_11_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__1_i_5[2]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_7[0].  Did not re-place instance usensor/digit_1000_carry__0_i_4
-INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_7[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net uuart/u_bit/o_data1002__90_carry_i_1_n_0.  Did not re-place instance uuart/u_bit/o_data1002__90_carry_i_1
+INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002__90_carry_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net uuart/u_bit/O[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry__0_i_1_3[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_18[3].  Did not re-place instance usensor/o_data1002__37_carry__1_i_1
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_18[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net uuart/u_bit/o_data1002_carry__2_i_4[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net usensor/data_reg_reg[15]_7[1]_repN_1.  Did not re-place instance usensor/digit_1000_carry__0_i_3_replica_1
+INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[15]_7[1]_repN_1. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_14_n_1. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_62_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net digit_10000_carry_i_27_n_7. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net digit_10000_carry_i_87_n_0.  Did not re-place instance digit_10000_carry_i_87
-INFO: [Physopt 32-702] Processed net digit_10000_carry_i_87_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_64_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net digit_10000_carry_i_47_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net digit_10000_carry_i_91_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net usensor/data_reg_reg[9]_0[3]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_40_n_0.  Did not re-place instance usensor/digit_10000_carry_i_40
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_40_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_72_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_39_n_0.  Did not re-place instance usensor/digit_10000_carry_i_39
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_39_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_72_n_4. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net usensor/digit_10000_carry_i_134_n_0.  Did not re-place instance usensor/digit_10000_carry_i_134
 INFO: [Physopt 32-702] Processed net usensor/digit_10000_carry_i_134_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net uuart/uclock_Tx/data_reg[3]_i_1__0_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net clk_IBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net clk. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.408 | TNS=-41.502 |
-Phase 4 Critical Path Optimization | Checksum: 2461babb2
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.419 | TNS=-41.403 |
+Phase 4 Critical Path Optimization | Checksum: 3b1ef902
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1708.418 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1708.418 ; gain = 0.000
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-10.408 | TNS=-41.502 |
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1704.945 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1704.945 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-10.419 | TNS=-41.403 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -910,25 +847,25 @@ Summary of Physical Synthesis Optimizations
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |          1.392  |          5.268  |           10  |              0  |                    48  |           0  |           2  |  00:00:08  |
-|  Total          |          1.392  |          5.268  |           10  |              0  |                    48  |           0  |           3  |  00:00:08  |
+|  Critical Path  |          1.510  |          5.935  |            5  |              0  |                    41  |           0  |           2  |  00:00:07  |
+|  Total          |          1.510  |          5.935  |            5  |              0  |                    41  |           0  |           3  |  00:00:07  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1708.418 ; gain = 0.000
-Ending Physical Synthesis Task | Checksum: f981532d
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1704.945 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 950f7e3b
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1704.945 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-517 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+459 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-phys_opt_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1708.418 ; gain = 0.000
+phys_opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1704.945 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1708.418 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 1704.992 ; gain = 0.047
 INFO: [Common 17-1381] The checkpoint 'C:/FPGA_Harman/top_sensor/top_sensor.runs/impl_1/top_sensor_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
@@ -944,51 +881,51 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 1216357d ConstDB: 0 ShapeSum: c8610a1a RouteDB: 0
+Checksum: PlaceDB: 197b1b2f ConstDB: 0 ShapeSum: 144c3a90 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: b742bf1c
+Phase 1 Build RT Design | Checksum: 1bfeb768d
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1803.063 ; gain = 83.188
-Post Restoration Checksum: NetGraph: 1f4f914f NumContArr: 97f32dcd Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1798.785 ; gain = 80.770
+Post Restoration Checksum: NetGraph: e2ff6c94 NumContArr: dcec09f9 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: b742bf1c
+Phase 2.1 Create Timer | Checksum: 1bfeb768d
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1803.063 ; gain = 83.188
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1798.793 ; gain = 80.777
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: b742bf1c
+Phase 2.2 Fix Topology Constraints | Checksum: 1bfeb768d
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1809.063 ; gain = 89.188
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1804.777 ; gain = 86.762
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: b742bf1c
+Phase 2.3 Pre Route Cleanup | Checksum: 1bfeb768d
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1809.063 ; gain = 89.188
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1804.777 ; gain = 86.762
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 180019b78
+Phase 2.4 Update Timing | Checksum: 1549d144c
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1815.090 ; gain = 95.215
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-9.995 | TNS=-39.886| WHS=-0.146 | THS=-8.266 |
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1810.727 ; gain = 92.711
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-10.012| TNS=-39.693| WHS=-0.155 | THS=-15.419|
 
-Phase 2 Router Initialization | Checksum: 1e2b4311b
+Phase 2 Router Initialization | Checksum: 1a52caf09
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1815.090 ; gain = 95.215
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1810.727 ; gain = 92.711
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0.000717532 %
-  Global Horizontal Routing Utilization  = 0.00169183 %
+  Global Horizontal Routing Utilization  = 0.000390422 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 703
+  Number of Failed Nets               = 806
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 703
+  Number of Unrouted Nets             = 806
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
@@ -996,20 +933,19 @@ Router Utilization Summary
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 1e2b4311b
+Phase 3.1 Global Routing | Checksum: 1a52caf09
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1816.434 ; gain = 96.559
-Phase 3 Initial Routing | Checksum: 13a156d4b
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1811.578 ; gain = 93.563
+Phase 3 Initial Routing | Checksum: 11e7d2723
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1816.434 ; gain = 96.559
-INFO: [Route 35-580] Design has 3 pins with tight setup and hold constraints.
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1811.578 ; gain = 93.563
+INFO: [Route 35-580] Design has 2 pins with tight setup and hold constraints.
 
 The top 5 pins with tight setup and hold constraints:
 
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-|              sys_clk_pin |              sys_clk_pin |                                                                         uuart/uclock_Tx/data_reg_reg[0]/D|
 |              sys_clk_pin |              sys_clk_pin |                                                                         uuart/uclock_Tx/data_reg_reg[3]/D|
 |              sys_clk_pin |              sys_clk_pin |                                                                         uuart/uclock_Tx/data_reg_reg[2]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
@@ -1020,122 +956,87 @@ File with complete list of pins: tight_setup_hold_pins.txt
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 359
- Number of Nodes with overlaps = 194
- Number of Nodes with overlaps = 113
- Number of Nodes with overlaps = 71
- Number of Nodes with overlaps = 34
- Number of Nodes with overlaps = 12
- Number of Nodes with overlaps = 14
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.888| TNS=-46.582| WHS=N/A    | THS=N/A    |
-
-Phase 4.1 Global Iteration 0 | Checksum: e38c1572
-
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 1816.434 ; gain = 96.559
-
-Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 221
- Number of Nodes with overlaps = 109
- Number of Nodes with overlaps = 59
- Number of Nodes with overlaps = 41
- Number of Nodes with overlaps = 26
- Number of Nodes with overlaps = 11
- Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 497
+ Number of Nodes with overlaps = 237
+ Number of Nodes with overlaps = 110
+ Number of Nodes with overlaps = 58
+ Number of Nodes with overlaps = 19
  Number of Nodes with overlaps = 5
  Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.720| TNS=-46.217| WHS=N/A    | THS=N/A    |
-
-Phase 4.2 Global Iteration 1 | Checksum: 15f3b288b
-
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1816.434 ; gain = 96.559
-
-Phase 4.3 Global Iteration 2
- Number of Nodes with overlaps = 208
- Number of Nodes with overlaps = 90
- Number of Nodes with overlaps = 31
- Number of Nodes with overlaps = 14
- Number of Nodes with overlaps = 13
- Number of Nodes with overlaps = 8
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.312| TNS=-45.168| WHS=N/A    | THS=N/A    |
-
-Phase 4.3 Global Iteration 2 | Checksum: 146ffeb22
-
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 1816.434 ; gain = 96.559
-
-Phase 4.4 Global Iteration 3
- Number of Nodes with overlaps = 184
- Number of Nodes with overlaps = 86
- Number of Nodes with overlaps = 41
- Number of Nodes with overlaps = 17
- Number of Nodes with overlaps = 6
  Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.693| TNS=-46.692| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-12.125| TNS=-48.018| WHS=N/A    | THS=N/A    |
 
-Phase 4.4 Global Iteration 3 | Checksum: 191c487ee
+Phase 4.1 Global Iteration 0 | Checksum: 1cd83c0ee
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1816.434 ; gain = 96.559
-Phase 4 Rip-up And Reroute | Checksum: 191c487ee
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 1811.578 ; gain = 93.563
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1816.434 ; gain = 96.559
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 271
+ Number of Nodes with overlaps = 165
+ Number of Nodes with overlaps = 46
+ Number of Nodes with overlaps = 38
+ Number of Nodes with overlaps = 19
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-12.513| TNS=-49.277| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: dca91789
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1811.578 ; gain = 93.563
+Phase 4 Rip-up And Reroute | Checksum: dca91789
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1811.578 ; gain = 93.563
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 1b4942420
+Phase 5.1.1 Update Timing | Checksum: 18ad14e97
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1816.434 ; gain = 96.559
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.233| TNS=-44.852| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1811.578 ; gain = 93.563
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-12.032| TNS=-47.674| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 1d98f53f4
+Phase 5.1 Delay CleanUp | Checksum: 1c03ea469
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1816.434 ; gain = 96.559
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1811.578 ; gain = 93.563
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1d98f53f4
+Phase 5.2 Clock Skew Optimization | Checksum: 1c03ea469
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1816.434 ; gain = 96.559
-Phase 5 Delay and Skew Optimization | Checksum: 1d98f53f4
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1811.578 ; gain = 93.563
+Phase 5 Delay and Skew Optimization | Checksum: 1c03ea469
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1816.434 ; gain = 96.559
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1811.578 ; gain = 93.563
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 20e1cc0a7
+Phase 6.1.1 Update Timing | Checksum: 1fa3c87bb
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1816.434 ; gain = 96.559
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.203| TNS=-44.732| WHS=0.077  | THS=0.000  |
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1811.578 ; gain = 93.563
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.951| TNS=-47.298| WHS=0.088  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 20e1cc0a7
+Phase 6.1 Hold Fix Iter | Checksum: 1fa3c87bb
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1816.434 ; gain = 96.559
-Phase 6 Post Hold Fix | Checksum: 20e1cc0a7
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1811.578 ; gain = 93.563
+Phase 6 Post Hold Fix | Checksum: 1fa3c87bb
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1816.434 ; gain = 96.559
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1811.578 ; gain = 93.563
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.230647 %
-  Global Horizontal Routing Utilization  = 0.275638 %
+  Global Vertical Routing Utilization    = 0.270509 %
+  Global Horizontal Routing Utilization  = 0.293467 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1146,10 +1047,10 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 23.4234%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 30.6306%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 35.2941%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 44.1176%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 28.8288%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 50.4505%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 38.2353%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 47.0588%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -1171,45 +1072,45 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: 182b0d624
+Phase 7 Route finalize | Checksum: 1d6847caa
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1816.434 ; gain = 96.559
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1811.578 ; gain = 93.563
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 182b0d624
+Phase 8 Verifying routed nets | Checksum: 1d6847caa
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1817.066 ; gain = 97.191
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1812.219 ; gain = 94.203
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1569ff2d1
+Phase 9 Depositing Routes | Checksum: 141fd94ad
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1817.066 ; gain = 97.191
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1812.219 ; gain = 94.203
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-11.203| TNS=-44.732| WHS=0.077  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-11.951| TNS=-47.298| WHS=0.088  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 1569ff2d1
+Phase 10 Post Router Timing | Checksum: 141fd94ad
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1817.066 ; gain = 97.191
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1812.219 ; gain = 94.203
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1817.066 ; gain = 97.191
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1812.219 ; gain = 94.203
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-538 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+478 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 1817.066 ; gain = 108.648
+route_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 1812.219 ; gain = 107.227
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1826.977 ; gain = 9.910
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1822.086 ; gain = 9.867
 INFO: [Common 17-1381] The checkpoint 'C:/FPGA_Harman/top_sensor/top_sensor.runs/impl_1/top_sensor_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file top_sensor_drc_routed.rpt -pb top_sensor_drc_routed.pb -rpx top_sensor_drc_routed.rpx
 Command: report_drc -file top_sensor_drc_routed.rpt -pb top_sensor_drc_routed.pb -rpx top_sensor_drc_routed.rpx
@@ -1229,7 +1130,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-550 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+490 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file top_sensor_route_status.rpt -pb top_sensor_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file top_sensor_timing_summary_routed.rpt -pb top_sensor_timing_summary_routed.pb -rpx top_sensor_timing_summary_routed.rpx -warn_on_violation 
@@ -1257,12 +1158,12 @@ Loading route data...
 Processing options...
 Creating bitmap...
 Creating bitstream...
-Bitstream compression saved 14262720 bits.
+Bitstream compression saved 14398304 bits.
 Writing bitstream ./top_sensor.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
 12 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2303.719 ; gain = 438.332
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 25 17:17:22 2025...
+write_bitstream: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2295.863 ; gain = 435.852
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 26 10:00:22 2025...
